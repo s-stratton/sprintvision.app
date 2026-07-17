@@ -1,0 +1,476 @@
+:root{
+  /* Light, high-contrast athletic theme */
+  --bg:#ffffff;
+  --bg-2:#f5f6f8;
+  --surface:#ffffff;
+  --surface-2:#f7f8fa;
+  --text:#0f1319;
+  --muted:#5b6472;
+  --muted-2:#9aa2ad;
+  --border:rgba(15,23,42,0.10);
+  --border-strong:rgba(15,23,42,0.18);
+  --accent:#ff3b23;
+  --accent-strong:#e42f14;
+  --accent-soft:rgba(255,59,35,0.10);
+  --header-height:72px;
+  --container:1200px;
+  --font-body:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --font-display:'Space Grotesk','Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{height:100%}
+body{margin:0;font-family:var(--font-body);color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.6}
+.container{max-width:var(--container);margin:0 auto;padding:0 24px}
+img{max-width:100%}
+::selection{background:var(--accent);color:#fff}
+
+/* Global heading styles (used across pages) */
+h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-0.02em}
+h2{text-align:center;margin:0 0 44px;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--text);line-height:1.08}
+
+/* Header */
+.site-header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,0.8);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid var(--border);z-index:1000;padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 24px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .logo{height:32px;border-radius:8px;object-fit:cover;display:block}
+.brand-text{font-family:var(--font-display);font-weight:700;color:var(--text);font-size:1.1rem;letter-spacing:-0.01em;text-decoration:none;white-space:nowrap}
+
+/* Header actions (nav + CTA) grouped on the right) */
+.header-actions{display:flex;align-items:center;gap:18px;margin-left:auto;flex-shrink:0}
+.nav{display:flex;gap:20px;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;font-weight:500;font-size:0.95rem;transition:color .15s ease}
+
+/* Mobile nav toggle (hamburger) */
+.nav-toggle{display:none;background:none;border:none;padding:8px;border-radius:8px;cursor:pointer;color:var(--text)}
+.nav-toggle svg{display:block}
+
+/* keep main content below fixed header */
+main{padding-top:var(--header-height)}
+
+/* Make anchored sections scroll into view below the fixed header */
+section[id]{
+  scroll-margin-top: calc(var(--header-height) + 12px);
+}
+.nav a:hover{color:var(--text)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:12px;text-decoration:none;font-family:var(--font-display);font-weight:600;font-size:0.98rem;letter-spacing:-0.01em;border:1px solid transparent;white-space:nowrap;transition:transform 0.18s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;cursor:pointer}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 30px rgba(255,59,35,0.28)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(255,59,35,0.42)}
+.btn-ghost{background:rgba(15,23,42,0.03);border:1px solid var(--border-strong);color:var(--text)}
+.btn-ghost:hover{background:rgba(15,23,42,0.06)}
+.trial{background:transparent;border:2px solid var(--accent);color:var(--accent);padding:8px 12px;border-radius:8px}
+
+/* Hero */
+.hero{padding:104px 0 8px;background:radial-gradient(1100px 560px at 72% -10%, rgba(255,59,35,0.10), transparent 60%), linear-gradient(180deg,#fbf4f2 0%, var(--bg) 60%);color:var(--text);position:relative;overflow:hidden}
+.hero-inner{display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:center}
+.hero-copy h1{font-size:clamp(2.5rem,5.6vw,4.4rem);margin:0 0 20px;color:var(--text);font-weight:700;line-height:1.0;letter-spacing:-0.03em}
+.hero-sub{font-family:var(--font-body);font-size:clamp(1.1rem,1.7vw,1.35rem);margin:0 0 32px;color:var(--muted);font-weight:400;line-height:1.5;letter-spacing:0}
+.lead{color:var(--muted);margin-bottom:20px}
+.hero .lead{line-height:1.7}
+.hero-ctas{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.hero-ctas .btn{margin-right:0}
+.hero-ctas .app-badge-link{margin-right:0}
+.hero .btn-primary{background:var(--accent);color:#fff}
+.hero .btn-ghost{background:rgba(15,23,42,0.04);border:1px solid var(--border-strong);color:var(--text)}
+.quick-features{margin-top:20px;list-style:none;padding:0;color:var(--text)}
+.quick-features li{margin-bottom:8px;font-weight:600;line-height:1.8}
+.hero-media .phone{
+  width:100%;
+  max-width:400px;
+  display:block;
+  border-radius:18px;
+  margin-bottom:-120px;
+  transform: translateX(36px);
+  filter: drop-shadow(0 26px 50px rgba(15,23,42,0.22));
+}
+
+.features{padding:96px 0;border-bottom:1px solid var(--border)}
+.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:8px;align-items:stretch}
+.features-grid article{background:var(--surface);border:1px solid var(--border);padding:30px 24px;border-radius:20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;min-height:220px;box-shadow:0 1px 2px rgba(15,23,42,0.04),0 12px 28px rgba(15,23,42,0.06);transition:transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease}
+.features-grid article:hover{transform:translateY(-5px);border-color:var(--border-strong);background:var(--surface);box-shadow:0 10px 20px rgba(15,23,42,0.08),0 28px 56px rgba(15,23,42,0.12)}
+.features-grid h3{margin:0;font-size:1.14rem;font-weight:600;letter-spacing:-0.01em;color:var(--text)}
+.feature-icon{width:64px;height:64px;margin:0;display:flex;align-items:center;justify-content:center;color:var(--accent);background:var(--accent-soft);border:1px solid rgba(255,59,35,0.28);border-radius:16px}
+.feature-icon svg{width:32px;height:32px;stroke:currentColor;fill:none;stroke-width:1.5;vector-effect:non-scaling-stroke}
+.feature p{color:var(--muted);margin:0;font-size:0.95rem;line-height:1.65}
+
+/* App Store badge image used as CTA */
+.app-badge-link{display:inline-block}
+.app-badge{height:44px;display:block}
+.cta-banner .app-badge{height:48px}
+
+/* Detail / Track section */
+.detail{padding:96px 0}
+.detail-grid{display:grid;grid-template-columns:480px 1fr;gap:64px;align-items:center}
+.detail .detail-media{
+  transform: none;
+}
+.detail-media .detail-img,.visualize-media .detail-img{max-width:420px;width:100%;margin:0 auto;border-radius:16px;display:block;border:1px solid var(--border)}
+.detail-media .detail-img.small,
+.visualize-media .detail-img.small{
+  max-width:320px;
+  box-shadow: 0 30px 70px rgba(15,23,42,0.16);
+}
+.detail-copy p{color:var(--muted);margin-bottom:14px;line-height:1.7}
+.detail-copy h4{margin:26px 0 14px;font-size:0.8rem;color:var(--accent);text-transform:uppercase;letter-spacing:0.12em;font-family:var(--font-display);font-weight:600}
+.detail-copy ul{padding-left:0;list-style:none;color:var(--muted);margin:0}
+.detail-copy li{margin-bottom:12px;padding-left:26px;position:relative;line-height:1.5}
+.detail-copy li::before{content:"";position:absolute;left:0;top:9px;width:14px;height:2px;background:var(--accent)}
+
+/* Detail section heading should be left-aligned (match Visualize) */
+.detail-copy h2{
+  text-align:left;
+  margin:0 0 22px;
+  font-size:clamp(2rem,3.4vw,3rem);
+  font-weight:700;
+  color:var(--text);
+}
+
+.contact-form{max-width:720px;margin:0 auto;text-align:left}
+.contact-form label{display:block;margin-bottom:8px;font-weight:600;color:var(--text);font-size:1.02rem}
+.contact-form input,.contact-form textarea{width:100%;padding:14px;border-radius:12px;border:1px solid var(--border);margin-bottom:16px;font-size:1.0625rem;background:var(--surface);color:var(--text);font-family:var(--font-body);transition:border-color 0.16s ease, box-shadow 0.16s ease, transform 0.08s ease}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--muted-2)}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft);outline:none}
+.contact-form textarea{min-height:160px;resize:vertical}
+.contact-form #formMessage{font-weight:700}
+
+/* Make the submit button larger and remove any shadow on this page */
+.contact-form .btn{padding:14px 22px;font-size:1.0625rem;border-radius:12px;box-shadow:none;-webkit-box-shadow:none;transition:transform 0.18s ease, box-shadow 0.18s ease, opacity 0.12s ease}
+.contact-form .btn-primary{box-shadow:none !important}
+
+/* Remove native appearance/shadow/filter for contact page buttons (fixes Safari/Chrome macOS rendering) */
+.contact-page .btn,
+.contact-page button,
+.contact-form .btn,
+.contact-form button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  outline: none;
+  transform: none !important;
+  background-clip: padding-box;
+}
+
+/* Provide an accessible focus ring for keyboard users */
+.contact-page .btn:focus,
+.contact-page button:focus,
+.contact-form .btn:focus,
+.contact-form button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+/* Global button hover (excluded on contact page via override) */
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(255,59,35,0.42)}
+.contact-page .btn-primary:hover{transform:none;box-shadow:none !important}
+
+/* Nav hover */
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+
+/* Visualize section (light grey) */
+.visualize{padding:56px 0;background:#f6f7f8}
+.visualize-inner{display:grid;grid-template-columns:1fr 300px;gap:36px;align-items:center}
+.visualize-copy p{color:var(--muted);line-height:1.85}
+/* Visualize section heading should be left-aligned (override global h2) */
+.visualize-copy h2{
+  text-align:left;
+  margin:0 0 40px;
+  font-size:3rem;
+  font-weight:600;
+  color:var(--text);
+}
+
+/* Stats */
+.stats{padding:48px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:center;text-align:center}
+.stat{padding:8px}
+.stat-icon{width:72px;height:72px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.stat-icon svg{width:36px;height:36px}
+.stat-number{font-size:2rem;font-weight:800;color:var(--text)}
+.stat-label{color:var(--muted);margin-top:6px}
+
+.cta-banner{padding:112px 0;color:#fff;text-align:center;position:relative;overflow:hidden}
+.cta-banner{
+  background-image: linear-gradient(rgba(8,9,11,0.34), rgba(8,9,11,0.5)), url('../assets/athlete_background.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.cta-banner .lead{color:rgba(255,255,255,0.9)}
+.cta-banner .btn-primary{background:var(--accent);color:#fff;padding:12px 22px;border-radius:12px;font-weight:600}
+/* Ensure banner headings stay white despite global h2 rule */
+.cta-banner h2{color:#ffffff;font-size:clamp(2rem,4vw,3.25rem)}
+
+/* make sure content appears above the background layers */
+.cta-banner .container{position:relative;z-index:2}
+
+/* Testimonials */
+.testimonials{padding:96px 0}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.test-grid blockquote{background:var(--surface);padding:28px;border-radius:18px;border:1px solid var(--border);color:var(--text);line-height:1.7;margin:0;font-size:1.02rem;box-shadow:0 1px 2px rgba(15,23,42,0.04),0 12px 28px rgba(15,23,42,0.06);transition:border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease}
+.test-grid blockquote:hover{border-color:var(--border-strong);transform:translateY(-4px);box-shadow:0 10px 20px rgba(15,23,42,0.08),0 28px 56px rgba(15,23,42,0.12)}
+.test-grid footer{display:block;margin-top:16px;color:var(--accent);font-weight:600;font-size:0.9rem;font-family:var(--font-display)}
+.test-grid .test-author{display:flex;align-items:center;gap:12px}
+.test-avatar{width:52px;height:52px;border-radius:50%;overflow:hidden;flex:0 0 auto;border:1px solid var(--border)}
+.test-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.test-meta{display:flex;flex-direction:column;gap:1px;min-width:0}
+.test-grid .test-name{color:var(--text);font-weight:700;font-size:0.95rem}
+.test-grid .test-role{color:var(--muted);font-weight:500;font-size:0.78rem;font-family:var(--font-body);line-height:1.35}
+
+/* Dots for testimonial carousel (visible on medium/small screens) */
+.test-dots{display:none;justify-content:center;gap:10px;margin-top:12px}
+.test-dot{width:10px;height:10px;border-radius:50%;background:var(--border-strong);border:none;padding:0;cursor:pointer;transition:transform 160ms ease, background 160ms ease;box-shadow:none}
+.test-dot:focus{outline:none;box-shadow:0 0 0 6px var(--accent-soft)}
+.test-dot.active{background:var(--accent);transform:scale(1.15)}
+@media (max-width:1000px){
+  .test-dots{display:flex}
+}
+
+/* Back to top button */
+.back-to-top{
+  position:fixed;
+  bottom:32px;
+  right:32px;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(8px);
+  transition: opacity 280ms ease, transform 280ms ease;
+  z-index:999;
+}
+.back-to-top.visible{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+.back-to-top:hover{
+  background:var(--accent-strong);
+  transform:translateY(-2px);
+}
+.back-to-top svg{
+  width:20px;
+  height:20px;
+  stroke:currentColor;
+}
+
+/* Footer */
+.site-footer{padding:64px 0 40px;border-top:1px solid var(--border);background:var(--bg)}
+
+.footer-row{display:flex;justify-content:space-between;align-items:flex-start;gap:48px;flex-wrap:wrap}
+.footer-brand{display:flex;flex-direction:column;gap:14px;max-width:340px}
+.footer-brand-top{display:flex;align-items:center;gap:10px}
+.footer-logo{height:34px;width:auto;border-radius:6px;object-fit:contain}
+.footer-brand-text{font-weight:700;color:var(--text);font-size:1.05rem}
+.footer-tagline{margin:0;color:var(--muted);line-height:1.6;font-size:0.95rem}
+.footer-badge{height:40px}
+.footer-groups{display:flex;gap:72px;flex-wrap:wrap}
+.footer-col{min-width:0}
+.footer-col h4{
+  margin:0 0 14px;
+  font-size:0.78rem;
+  font-weight:700;
+  color:var(--text);
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+}
+.footer-col a{display:block;color:var(--muted);text-decoration:none;margin:8px 0;line-height:1.5;transition:color 0.15s ease}
+.footer-col a:hover{color:var(--text)}
+.footer-divider{border:none;border-top:1px solid var(--border);margin:32px 0 18px}
+.footer-bottom{display:flex;justify-content:center;padding-top:0}
+.footer-bottom .muted{margin:0;color:var(--muted);font-size:0.9rem}
+
+/* Responsive */
+@media (max-width:1000px){
+  .hero-inner{grid-template-columns:1fr 360px}
+  .features{padding:56px 0}
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .test-grid{grid-template-columns:1fr;position:relative;overflow:visible;min-height:160px;touch-action:pan-y;padding-left:calc(env(safe-area-inset-left));padding-right:calc(env(safe-area-inset-right))}
+  /* carousel: hide all but current testimonial */
+  .test-grid blockquote{position:absolute;left:0;right:0;top:0;opacity:0;width:100%;transition:opacity 600ms ease;margin:0;touch-action:pan-y;pointer-events:none}
+  .test-grid blockquote.active{position:relative;opacity:1;pointer-events:auto}
+  .footer-columns{flex-direction:column;align-items:flex-start}
+  .detail-grid{grid-template-columns:360px 1fr}
+  .detail .detail-media{transform:none}
+  .visualize-inner{grid-template-columns:1fr 280px}
+  /* reduce visualize phone on medium screens */
+  .visualize-media .detail-img{max-width:280px}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  /* add safe-area insets on medium screens for edge text */
+  .container{padding-left:calc(24px + env(safe-area-inset-left));padding-right:calc(24px + env(safe-area-inset-right))}
+  .policy-page .policy-content{padding:56px calc(24px + env(safe-area-inset-left)) 80px calc(24px + env(safe-area-inset-right))}
+  /* hide nav on medium screens */
+  .nav{display:none}
+}
+@media (max-width:700px){
+  /* keep the header CTA compact so it never crowds the brand */
+  .header-actions .btn{padding:9px 15px;font-size:0.85rem}
+  .hero-inner{grid-template-columns:1fr}
+  /* place text above phone on small screens */
+  .hero-media{order:1;margin-bottom:0}
+  /* make hero phone larger on small screens */
+  .hero-media .phone{max-width:300px;margin-bottom:12px;transform:none}
+  /* add extra bottom padding so phone doesn't touch hero end */
+  .hero{padding-bottom:48px}
+  /* center hero content and add spacing on small screens */
+  .hero-inner{justify-items:center}
+  .hero-copy{text-align:center;padding:0 12px;max-width:720px;margin:0 auto}
+  .hero-ctas{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+  /* increase safe-area and edge inset for small screens */
+  .container{padding-left:calc(16px + env(safe-area-inset-left));padding-right:calc(16px + env(safe-area-inset-right))}
+  .policy-page .policy-content{padding:56px calc(16px + env(safe-area-inset-left)) 80px calc(16px + env(safe-area-inset-right))}
+  /* mobile nav: hidden on small screens */
+  .nav{display:none}
+  .nav-toggle{display:none}
+  .features{padding:44px 0}
+  .features-grid{grid-template-columns:1fr}
+  /* small-screen tweaks: reduce icon size and tighten article rows */
+  .features-grid article{grid-template-rows:110px auto 1fr;min-height:180px}
+  .feature-icon svg{width:56px;height:56px}
+  .detail-grid{grid-template-columns:1fr}
+  /* center section headings and paragraphs on small screens to avoid edge cutoff */
+  .detail-copy h2,.visualize-copy h2{text-align:center}
+  .detail-copy p,.visualize-copy p{text-align:center}
+  .detail-copy h4{text-align:center}
+  /* center the list as a block, but keep the bullets aligned to each other */
+  .detail-copy ul{width:fit-content;max-width:100%;margin-left:auto;margin-right:auto}
+  /* make visualize/track phone smaller on small screens */
+  .visualize-media .detail-img{max-width:260px}
+  .visualize-inner{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-row{flex-direction:column;gap:32px}
+  .footer-groups{gap:56px}
+  .stats-grid{grid-template-columns:1fr}
+}
+
+.policy-page .policy-content{max-width:860px;margin:0 auto;padding:72px 24px 96px 24px}
+.policy-page .policy-updated{color:var(--muted-2);margin:0 0 28px;font-size:0.9rem}
+.policy-page .policy-title{text-align:center;margin:6px 0 18px;font-size:clamp(2.4rem,4vw,3.25rem);font-weight:700;color:var(--text);letter-spacing:-0.02em}
+.policy-page .lead{color:var(--text);font-size:1.05rem;line-height:1.7;margin-bottom:18px;font-weight:400}
+.policy-page p{color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:16px}
+.policy-page h3{text-align:left;font-weight:600;color:var(--text);font-size:0.92rem;margin:40px 0 16px;letter-spacing:0.06em;border-left:3px solid var(--accent);padding-left:14px}
+
+/* Make policy headings uppercase */
+.policy-page h1,
+.policy-page h3{
+  text-transform:uppercase;
+}
+
+/* Policy subheadings and lists — tuned to match site UI */
+.policy-page h4{
+  text-align:left;
+  margin:20px 0 8px;
+  font-size:0.95rem;
+  font-weight:600;
+  color:var(--text);
+}
+.policy-page ul{
+  margin:0 0 14px 1.15rem;
+  padding-left:0;
+  list-style:disc;
+}
+.policy-page ul li{
+  margin:6px 0;
+  color:var(--muted);
+  font-size:0.98rem;
+  line-height:1.6;
+}
+
+/* ------------------------------------------------------------------ */
+/* Coming soon (app not yet live) */
+/* ------------------------------------------------------------------ */
+.btn-disabled{opacity:.55;cursor:default;pointer-events:none;box-shadow:none !important}
+.coming-soon{display:inline-flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;cursor:default;pointer-events:none}
+.coming-soon .app-badge{opacity:.72;border:1px solid var(--border);border-radius:10px}
+.coming-soon-note{font-size:.85rem;font-weight:600;letter-spacing:.02em;color:var(--muted)}
+.hero .coming-soon-note{color:var(--muted)}
+.cta-banner .coming-soon-note{color:rgba(255,255,255,0.92)}
+
+/* ------------------------------------------------------------------ */
+/* Metrics showcase */
+/* ------------------------------------------------------------------ */
+.metrics{padding:96px 0}
+.metrics .metrics-lead{max-width:680px;margin:0 auto 48px;text-align:center;color:var(--muted);line-height:1.7}
+.metric-chips{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;max-width:960px;margin:0 auto}
+.metric-chip{display:flex;align-items:center;gap:11px;padding:16px 18px;border:1px solid var(--border);border-radius:14px;background:var(--surface);color:var(--text);font-weight:600;font-size:0.95rem;line-height:1.2;box-shadow:0 1px 2px rgba(15,23,42,0.04);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.metric-chip:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 10px 24px rgba(255,59,35,0.14)}
+.metric-chip .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);display:inline-block;flex:0 0 auto;box-shadow:0 0 0 4px var(--accent-soft)}
+
+@media (max-width:900px){
+  .metric-chips{grid-template-columns:repeat(3,1fr);max-width:640px}
+}
+@media (max-width:600px){
+  .metric-chips{grid-template-columns:1fr 1fr;gap:12px;max-width:460px;padding:0 16px}
+  .metric-chip{padding:14px 14px;font-size:0.9rem;gap:9px}
+}
+
+/* ------------------------------------------------------------------ */
+/* AI coaching report highlight */
+/* ------------------------------------------------------------------ */
+.report{padding:96px 0;background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.report-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;max-width:var(--container);margin:0 auto;padding:0 24px}
+.report-copy h2{text-align:left;margin:0 0 22px;font-size:clamp(2rem,3.4vw,3rem);font-weight:700;color:var(--text)}
+.report-copy p{color:var(--muted);line-height:1.7;margin-bottom:14px}
+.report-copy ul{padding-left:0;list-style:none;color:var(--muted);margin:0}
+.report-copy li{margin-bottom:12px;padding-left:26px;position:relative;line-height:1.5}
+.report-copy li::before{content:"";position:absolute;left:0;top:9px;width:14px;height:2px;background:var(--accent)}
+.report-media{display:flex;justify-content:center}
+.report-media .report-phone{width:100%;max-width:300px;display:block;border-radius:18px;filter:drop-shadow(0 26px 50px rgba(15,23,42,0.2))}
+
+@media (max-width:1000px){
+  .report-inner{grid-template-columns:1fr;gap:28px}
+  .report-copy h2{text-align:center}
+  .report-copy p{text-align:center}
+  .report-copy ul{width:fit-content;max-width:100%;margin-left:auto;margin-right:auto}
+}
+@media (max-width:700px){
+  .metrics{padding:44px 0}
+  .report{padding:44px 0}
+}
+
+/* ------------------------------------------------------------------ */
+/* Scroll reveal animations                                            */
+/* ------------------------------------------------------------------ */
+@keyframes sv-reveal{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+
+/* Elements start hidden only when reveal is enabled (motion allowed).
+   :where() keeps specificity at zero so the .is-visible rule always wins. */
+html.reveal-enabled :where(
+  .hero-copy, .hero-media,
+  .features-grid .feature,
+  .detail-media, .detail-copy,
+  #metrics > h2, #metrics .metrics-lead, .metric-chip,
+  .report-copy, .report-media,
+  #testimonials > h2, .test-grid,
+  .cta-banner h2, .cta-banner .lead, .cta-banner .app-badge-link
+){opacity:0}
+
+html.reveal-enabled .is-visible{opacity:1;animation:sv-reveal .7s cubic-bezier(.16,.84,.44,1) backwards}
+
+@media (prefers-reduced-motion:reduce){
+  html.reveal-enabled :where(
+    .hero-copy, .hero-media,
+    .features-grid .feature,
+    .detail-media, .detail-copy,
+    #metrics > h2, #metrics .metrics-lead, .metric-chip,
+    .report-copy, .report-media,
+    #testimonials > h2, .test-grid,
+    .cta-banner h2, .cta-banner .lead, .cta-banner .app-badge-link
+  ){opacity:1;animation:none}
+}
+

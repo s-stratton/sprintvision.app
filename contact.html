@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Get in touch with the SprintVision team — questions, feedback, or partnership enquiries.">
+  <title>Contact — SprintVision</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#242424">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SprintVision">
+  <meta property="og:title" content="Contact — SprintVision">
+  <meta property="og:description" content="Get in touch with the SprintVision team — questions, feedback, or partnership enquiries.">
+  <meta property="og:image" content="assets/athlete_background.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — SprintVision">
+  <meta name="twitter:description" content="Get in touch with the SprintVision team — questions, feedback, or partnership enquiries.">
+  <meta name="twitter:image" content="assets/athlete_background.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="policy-page contact-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/sprint_vision_logo.png" alt="SprintVision logo" class="logo">
+        <span class="brand-text">SprintVision</span>
+      </a>
+      <div class="header-actions">
+        <span class="btn btn-primary btn-disabled" role="button" aria-disabled="true">Coming Soon</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container policy-content">
+      <h1 class="policy-title">Contact Us</h1>
+
+      <p class="lead" style="text-align:center;">Have a question, feedback, or want to work with us? Fill out the form below and we'll get back to you.</p>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" required aria-required="true">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+
+        <div style="margin-top:12px">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+
+        <div id="formMessage" role="status" aria-live="polite" style="margin-top:12px"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-row">
+        <div class="footer-brand">
+          <div class="footer-brand-top">
+            <img src="assets/sprint_vision_logo.png" alt="SprintVision logo" class="footer-logo">
+            <div class="footer-brand-text">SprintVision</div>
+          </div>
+          <p class="footer-tagline">Stop guessing. Start getting faster.</p>
+          <span class="app-badge-link coming-soon" aria-disabled="true">
+            <img src="assets/Download_On_AppStore.svg" alt="SprintVision — coming soon to the App Store" class="app-badge footer-badge">
+          </span>
+        </div>
+
+        <div class="footer-groups">
+          <nav class="footer-col" aria-label="Company">
+            <h4>Company</h4>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+          </nav>
+
+          <nav class="footer-col" aria-label="Follow">
+            <h4>Follow</h4>
+            <a href="https://vm.tiktok.com/ZNRoRgNN7/" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://www.instagram.com/sprintvisionapp" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://x.com/sprintvisionapp" target="_blank" rel="noopener">X</a>
+          </nav>
+        </div>
+      </div>
+
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <p class="muted">© 2026 <strong>SprintVision</strong>. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    const form = document.getElementById('contactForm');
+    const msg = document.getElementById('formMessage');
+    function showMessage(text, isError){
+      msg.textContent = text;
+      msg.style.color = isError ? '#c0392b' : 'var(--accent)';
+    }
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!subject || !message){ showMessage('Please complete all fields.', true); return; }
+      window.location.href = 'mailto:contactsprintvision@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
+      showMessage('Opening your email app to send your message to our team.');
+    });
+  })();
+  </script>
+</body>
+</html>
