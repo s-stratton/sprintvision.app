@@ -297,6 +297,8 @@ section[id]{
 
 /* Responsive */
 @media (max-width:1000px){
+  /* iOS/Android don't support fixed backgrounds — use scroll to avoid wrong crop */
+  .cta-banner{background-attachment:scroll}
   .hero-inner{grid-template-columns:1fr 360px}
   .features{padding:56px 0}
   .features-grid{grid-template-columns:repeat(2,1fr)}
@@ -353,8 +355,13 @@ section[id]{
   .visualize-media .detail-img{max-width:260px}
   .visualize-inner{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
-  .footer-row{flex-direction:column;gap:32px}
-  .footer-groups{gap:56px}
+  .footer-row{flex-direction:column;gap:32px;align-items:center;text-align:center}
+  .footer-brand{align-items:center;max-width:none}
+  .footer-groups{gap:56px;justify-content:center}
+  .footer-col h4,.footer-col a{text-align:left}
+  /* extra bottom space so the floating back-to-top button doesn't overlap the copyright */
+  .site-footer{padding-bottom:96px}
+  .footer-bottom{padding:0 24px}
   .stats-grid{grid-template-columns:1fr}
 }
 
@@ -362,29 +369,29 @@ section[id]{
 .policy-page .policy-updated{color:var(--muted-2);margin:0 0 28px;font-size:0.9rem}
 .policy-page .policy-title{text-align:center;margin:6px 0 18px;font-size:clamp(2.4rem,4vw,3.25rem);font-weight:700;color:var(--text);letter-spacing:-0.02em}
 .policy-page .lead{color:var(--text);font-size:1.05rem;line-height:1.7;margin-bottom:18px;font-weight:400}
-.policy-page p{color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:16px}
-.policy-page h3{text-align:left;font-weight:600;color:var(--text);font-size:0.92rem;margin:40px 0 16px;letter-spacing:0.06em;border-left:3px solid var(--accent);padding-left:14px}
+.policy-page .policy-content p{color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:16px}
+.policy-page .policy-content h3{text-align:left;font-weight:600;color:var(--text);font-size:0.92rem;margin:40px 0 16px;letter-spacing:0.06em;border-left:3px solid var(--accent);padding-left:14px}
 
 /* Make policy headings uppercase */
-.policy-page h1,
-.policy-page h3{
+.policy-page .policy-content h1,
+.policy-page .policy-content h3{
   text-transform:uppercase;
 }
 
 /* Policy subheadings and lists — tuned to match site UI */
-.policy-page h4{
+.policy-page .policy-content h4{
   text-align:left;
   margin:20px 0 8px;
   font-size:0.95rem;
   font-weight:600;
   color:var(--text);
 }
-.policy-page ul{
+.policy-page .policy-content ul{
   margin:0 0 14px 1.15rem;
   padding-left:0;
   list-style:disc;
 }
-.policy-page ul li{
+.policy-page .policy-content ul li{
   margin:6px 0;
   color:var(--muted);
   font-size:0.98rem;
