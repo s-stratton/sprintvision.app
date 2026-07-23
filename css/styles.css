@@ -75,6 +75,7 @@ section[id]{
 .hero .btn-ghost{background:rgba(15,23,42,0.04);border:1px solid var(--border-strong);color:var(--text)}
 .quick-features{margin-top:20px;list-style:none;padding:0;color:var(--text)}
 .quick-features li{margin-bottom:8px;font-weight:600;line-height:1.8}
+.hero-media{align-self:end}
 .hero-media .phone{
   width:100%;
   max-width:400px;
