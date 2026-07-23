@@ -334,6 +334,11 @@ section[id]{
   .hero-inner{justify-items:center}
   .hero-copy{text-align:center;padding:0 12px;max-width:720px;margin:0 auto}
   .hero-ctas{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+  /* stack the waitlist input and button full-width on mobile */
+  .hero-ctas .waitlist-form{width:100%;max-width:420px}
+  .waitlist-row{flex-direction:column;align-items:stretch}
+  .waitlist-submit{width:100%}
+  .waitlist-msg{text-align:center}
   /* increase safe-area and edge inset for small screens */
   .container{padding-left:calc(16px + env(safe-area-inset-left));padding-right:calc(16px + env(safe-area-inset-right))}
   .policy-page .policy-content{padding:56px calc(16px + env(safe-area-inset-left)) 80px calc(16px + env(safe-area-inset-right))}
