@@ -30,7 +30,7 @@
         <span class="brand-text">SprintVision</span>
       </a>
       <div class="header-actions">
-        <span class="btn btn-primary btn-disabled" role="button" aria-disabled="true">Coming Soon</span>
+        <a href="index.html#waitlist" class="btn btn-primary">Join Waitlist</a>
       </div>
     </div>
   </header>
@@ -66,9 +66,13 @@
             <div class="footer-brand-text">SprintVision</div>
           </div>
           <p class="footer-tagline">Stop guessing. Start getting faster.</p>
-          <span class="app-badge-link coming-soon" aria-disabled="true">
-            <img src="assets/Download_On_AppStore.svg" alt="SprintVision — coming soon to the App Store" class="app-badge footer-badge">
-          </span>
+          <form class="waitlist-form footer-waitlist" data-waitlist data-source="footer-contact">
+            <div class="waitlist-row">
+              <input type="email" name="email" class="waitlist-input" placeholder="Your email" aria-label="Email address" autocomplete="email" required>
+              <button type="submit" class="btn btn-primary waitlist-submit">Join</button>
+            </div>
+            <p class="waitlist-msg" role="status" aria-live="polite"></p>
+          </form>
         </div>
 
         <div class="footer-groups">
@@ -113,5 +117,6 @@
     });
   })();
   </script>
+  <script src="js/waitlist.js" defer></script>
 </body>
 </html>

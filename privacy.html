@@ -30,7 +30,7 @@
         <span class="brand-text">SprintVision</span>
       </a>
       <div class="header-actions">
-        <span class="btn btn-primary btn-disabled" role="button" aria-disabled="true">Coming Soon</span>
+        <a href="index.html#waitlist" class="btn btn-primary">Join Waitlist</a>
       </div>
     </div>
   </header>
@@ -39,7 +39,7 @@
     <section class="container policy-content">
       <h1 class="policy-title">Privacy Policy</h1>
 
-      <p class="policy-updated">Last updated: 12 July 2026</p>
+      <p class="policy-updated">Last updated: 20 July 2026</p>
 
       <h3>Overview</h3>
       <p>This Privacy Policy explains how SprintVision (the “App”) handles your information. We are committed to protecting your privacy and being transparent about what data is used and where it is processed. Your sprint videos are analysed on your device; the App only sends the limited information described below to the cloud services that make accounts, AI reports and subscriptions work.</p>
@@ -74,8 +74,9 @@
       <h3>Notifications</h3>
       <p>With your permission, the App schedules local reminder notifications (for example, trial reminders) on your device. These are generated on-device, and you can disable them at any time in your device settings.</p>
 
-      <h3>Device Information</h3>
-      <p>Limited device information (such as device type or operating system) may be used locally to ensure the App functions correctly.</p>
+      <h3>Diagnostics and Device Information</h3>
+      <p>If the App encounters an unexpected software error, it automatically sends a limited diagnostic report to our backend so we can identify and fix the problem. A report may include the error message, technical stack trace, app version, device operating system, and your account identifier and email address. Reports do not include your sprint videos, images, saved analyses, passwords, or payment information.</p>
+      <p>Diagnostic reports are processed through Supabase and emailed to our support address through our email delivery provider. Duplicate reports are limited, and reports are retained only as long as reasonably necessary to investigate and resolve software issues.</p>
 
       <h3>How Your Data Is Used</h3>
       <ul>
@@ -84,6 +85,7 @@
         <li>To generate the AI coaching reports you request</li>
         <li>To manage subscriptions and entitlements</li>
         <li>To send reminders you have opted in to</li>
+        <li>To detect, investigate and fix software errors</li>
       </ul>
       <p>We do not use your data for advertising, and we do not sell your data.</p>
 
@@ -101,6 +103,7 @@
         <li><strong>Google</strong> — Google Sign-In and the Gemini AI used to generate reports</li>
         <li><strong>Apple</strong> — Sign in with Apple</li>
         <li><strong>RevenueCat</strong> and the app stores — subscription management and payments</li>
+        <li><strong>Resend</strong> — delivery of automatic diagnostic reports to our support inbox</li>
       </ul>
       <p>These services operate under their own privacy policies.</p>
 
@@ -139,9 +142,13 @@
             <div class="footer-brand-text">SprintVision</div>
           </div>
           <p class="footer-tagline">Stop guessing. Start getting faster.</p>
-          <span class="app-badge-link coming-soon" aria-disabled="true">
-            <img src="assets/Download_On_AppStore.svg" alt="SprintVision — coming soon to the App Store" class="app-badge footer-badge">
-          </span>
+          <form class="waitlist-form footer-waitlist" data-waitlist data-source="footer-privacy">
+            <div class="waitlist-row">
+              <input type="email" name="email" class="waitlist-input" placeholder="Your email" aria-label="Email address" autocomplete="email" required>
+              <button type="submit" class="btn btn-primary waitlist-submit">Join</button>
+            </div>
+            <p class="waitlist-msg" role="status" aria-live="polite"></p>
+          </form>
         </div>
 
         <div class="footer-groups">
@@ -167,5 +174,6 @@
       </div>
     </div>
   </footer>
+  <script src="js/waitlist.js" defer></script>
 </body>
 </html>

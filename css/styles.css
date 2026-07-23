@@ -409,6 +409,33 @@ section[id]{
 .cta-banner .coming-soon-note{color:rgba(255,255,255,0.92)}
 
 /* ------------------------------------------------------------------ */
+/* Email waitlist */
+/* ------------------------------------------------------------------ */
+.waitlist-form{width:100%;max-width:460px}
+#waitlist{scroll-margin-top:calc(var(--header-height) + 20px)}
+.hero-ctas .waitlist-form{margin:0}
+.waitlist-row{display:flex;gap:10px;flex-wrap:wrap}
+.waitlist-input{flex:1 1 220px;min-width:0;padding:13px 16px;border:1px solid var(--border-strong);border-radius:12px;background:var(--surface);color:var(--text);font-family:var(--font-body);font-size:1rem;line-height:1.4;transition:border-color .18s ease, box-shadow .18s ease}
+.waitlist-input::placeholder{color:var(--muted-2)}
+.waitlist-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.waitlist-submit{flex:0 0 auto}
+.waitlist-msg{min-height:1.25em;margin:10px 2px 0;font-size:.9rem;font-weight:600;line-height:1.4}
+.waitlist-msg.success{color:#1a8f3c}
+.waitlist-msg.error{color:var(--accent-strong)}
+
+/* On the accent CTA banner the form sits on a red background */
+.cta-banner .waitlist-form{margin-left:auto;margin-right:auto}
+.cta-banner .waitlist-input{background:#fff;border-color:transparent}
+.cta-banner .waitlist-submit.btn-primary{background:#fff;color:var(--accent);box-shadow:0 10px 30px rgba(0,0,0,0.18)}
+.cta-banner .waitlist-submit.btn-primary:hover{box-shadow:0 16px 40px rgba(0,0,0,0.26)}
+.cta-banner .waitlist-msg.success{color:#eafff0}
+.cta-banner .waitlist-msg.error{color:#ffe2dc}
+
+/* Compact variant used in the footer */
+.footer-waitlist{margin-top:14px;max-width:340px}
+.footer-waitlist .waitlist-input{padding:11px 14px}
+
+/* ------------------------------------------------------------------ */
 /* Metrics showcase */
 /* ------------------------------------------------------------------ */
 .metrics{padding:96px 0}

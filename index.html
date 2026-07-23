@@ -41,7 +41,7 @@
         <span class="brand-text">SprintVision</span>
       </a>
       <div class="header-actions">
-        <span class="btn btn-primary btn-disabled" role="button" aria-disabled="true">Coming Soon</span>
+        <a href="#waitlist" class="btn btn-primary">Join Waitlist</a>
       </div>
     </div>
   </header>
@@ -53,10 +53,13 @@
           <h1>Stop Guessing. Start Getting Faster.</h1>
           <h3 class="hero-sub">Upload one video. See exactly what's costing you speed — and how to fix it.</h3>
           <div class="hero-ctas">
-            <span class="app-badge-link coming-soon" aria-disabled="true">
-              <img src="assets/Download_On_AppStore.svg" alt="SprintVision — coming soon to the App Store" class="app-badge">
-              <span class="coming-soon-note">Coming soon to the App Store</span>
-            </span>
+            <form class="waitlist-form" id="waitlist" data-waitlist data-source="hero">
+              <div class="waitlist-row">
+                <input type="email" name="email" class="waitlist-input" placeholder="Enter your email" aria-label="Email address" autocomplete="email" required>
+                <button type="submit" class="btn btn-primary waitlist-submit">Join Waitlist</button>
+              </div>
+              <p class="waitlist-msg" role="status" aria-live="polite"></p>
+            </form>
           
           </div>
           <!-- quick features removed per request -->
@@ -231,10 +234,13 @@
       <div class="container">
         <h2>Your Next PB Starts With One Video</h2>
         <p class="lead">Download SprintVision and start getting faster.</p>
-        <span class="app-badge-link coming-soon" aria-disabled="true">
-          <img src="assets/Download_On_AppStore.svg" alt="SprintVision — coming soon to the App Store" class="app-badge">
-          <span class="coming-soon-note">Coming soon to the App Store</span>
-        </span>
+        <form class="waitlist-form" data-waitlist data-source="cta-banner">
+          <div class="waitlist-row">
+            <input type="email" name="email" class="waitlist-input" placeholder="Enter your email" aria-label="Email address" autocomplete="email" required>
+            <button type="submit" class="btn btn-primary waitlist-submit">Join Waitlist</button>
+          </div>
+          <p class="waitlist-msg" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
@@ -255,9 +261,13 @@
             <div class="footer-brand-text">SprintVision</div>
           </div>
           <p class="footer-tagline">Stop guessing. Start getting faster.</p>
-          <span class="app-badge-link coming-soon" aria-disabled="true">
-            <img src="assets/Download_On_AppStore.svg" alt="SprintVision — coming soon to the App Store" class="app-badge footer-badge">
-          </span>
+          <form class="waitlist-form footer-waitlist" data-waitlist data-source="footer">
+            <div class="waitlist-row">
+              <input type="email" name="email" class="waitlist-input" placeholder="Your email" aria-label="Email address" autocomplete="email" required>
+              <button type="submit" class="btn btn-primary waitlist-submit">Join</button>
+            </div>
+            <p class="waitlist-msg" role="status" aria-live="polite"></p>
+          </form>
         </div>
 
         <div class="footer-groups">
@@ -296,7 +306,7 @@
         '#metrics > h2', '#metrics .metrics-lead', '.metric-chip',
         '.report-copy', '.report-media',
         '#testimonials > h2', '.test-grid',
-        '.cta-banner h2', '.cta-banner .lead', '.cta-banner .app-badge-link'
+        '.cta-banner h2', '.cta-banner .lead', '.cta-banner .waitlist-form'
       ].join(',');
       var els = Array.prototype.slice.call(document.querySelectorAll(selector));
       if(!els.length) return;
@@ -443,5 +453,6 @@
 
   })();
   </script>
+  <script src="js/waitlist.js" defer></script>
 </body>
 </html>
