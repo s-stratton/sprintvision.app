@@ -412,7 +412,6 @@ section[id]{
 /* Email waitlist */
 /* ------------------------------------------------------------------ */
 .waitlist-form{width:100%;max-width:460px}
-#waitlist{scroll-margin-top:calc(var(--header-height) + 20px)}
 .hero-ctas .waitlist-form{margin:0}
 .waitlist-row{display:flex;gap:10px;flex-wrap:wrap}
 .waitlist-input{flex:1 1 220px;min-width:0;padding:13px 16px;border:1px solid var(--border-strong);border-radius:12px;background:var(--surface);color:var(--text);font-family:var(--font-body);font-size:1rem;line-height:1.4;transition:border-color .18s ease, box-shadow .18s ease}
@@ -420,6 +419,7 @@ section[id]{
 .waitlist-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
 .waitlist-submit{flex:0 0 auto}
 .waitlist-msg{min-height:1.25em;margin:10px 2px 0;font-size:.9rem;font-weight:600;line-height:1.4}
+.waitlist-msg:empty{display:none}
 .waitlist-msg.success{color:#1a8f3c}
 .waitlist-msg.error{color:var(--accent-strong)}
 
