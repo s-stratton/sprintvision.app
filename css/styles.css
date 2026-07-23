@@ -337,6 +337,7 @@ section[id]{
   /* stack the waitlist input and button full-width on mobile */
   .hero-ctas .waitlist-form{width:100%;max-width:420px}
   .waitlist-row{flex-direction:column;align-items:stretch}
+  .hero-ctas .waitlist-input{flex:0 0 auto;width:100%}
   .waitlist-submit{width:100%}
   .waitlist-msg{text-align:center}
   /* increase safe-area and edge inset for small screens */
