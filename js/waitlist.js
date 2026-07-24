@@ -47,7 +47,6 @@
         },
         body: JSON.stringify({
           email: email,
-          source: form.getAttribute('data-source') || location.pathname,
         }),
       })
         .then(function (res) {
