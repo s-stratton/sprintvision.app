@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>SprintVision — Sample video for App Review</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#242424">
+  <style>
+    :root{
+      --bg:#0f1319;--surface:#171c24;--surface-2:#1f2632;--text:#f5f6f8;
+      --muted:#9aa2ad;--border:rgba(255,255,255,0.10);--accent:#ff3b23;--accent-strong:#e42f14;
+      --font:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:var(--font);color:var(--text);background:var(--bg);
+      -webkit-font-smoothing:antialiased;line-height:1.6;padding:32px 20px 64px}
+    .wrap{max-width:640px;margin:0 auto}
+    h1{font-size:clamp(1.6rem,5vw,2.2rem);letter-spacing:-0.02em;margin:0 0 8px}
+    p.lead{color:var(--muted);margin:0 0 28px}
+    video{width:100%;border-radius:14px;background:#000;border:1px solid var(--border);display:block}
+    .download{display:block;text-align:center;margin:24px 0 8px;padding:16px 20px;border-radius:12px;
+      background:var(--accent);color:#fff;font-weight:700;font-size:1.05rem;text-decoration:none}
+    .download:active{background:var(--accent-strong)}
+    .hint{color:var(--muted);font-size:0.9rem;text-align:center;margin:0 0 32px}
+    ol{background:var(--surface);border:1px solid var(--border);border-radius:14px;
+      padding:20px 20px 20px 40px;margin:0}
+    li{margin:0 0 12px}
+    li:last-child{margin-bottom:0}
+    li strong{color:var(--text)}
+    .note{margin-top:28px;padding:16px 18px;border-radius:12px;background:var(--surface-2);
+      border:1px solid var(--border);color:var(--muted);font-size:0.92rem}
+    a{color:var(--accent)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Sample sprint video</h1>
+    <p class="lead">For App Review — a short clip to test SprintVision's on-device analysis.</p>
+
+    <video src="assets/sample-sprint.mp4" controls playsinline preload="metadata"></video>
+
+    <a class="download" href="assets/sample-sprint.mp4" download="sprintvision-sample.mp4">Download video</a>
+    <p class="hint">On iPhone/iPad, tapping Download saves the file so you can add it to Photos.</p>
+
+    <ol>
+      <li><strong>Tap “Download video”</strong> above. Safari saves it to the Downloads folder.</li>
+      <li><strong>Open the Downloads menu</strong> (the arrow icon in Safari's address bar) and tap the file to open it in <strong>Files</strong>.</li>
+      <li><strong>In Files, press and hold</strong> the video, choose <strong>Share</strong>, then <strong>Save Video</strong> — it's now in Photos.</li>
+      <li><strong>In SprintVision</strong>, start a new analysis and pick this video from your Photos library.</li>
+    </ol>
+
+    <div class="note">
+      Analysis runs entirely on-device. Questions? <a href="mailto:contactsprintvision@gmail.com">contactsprintvision@gmail.com</a>
+    </div>
+  </div>
+</body>
+</html>
