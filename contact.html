@@ -42,6 +42,9 @@
       <p class="lead" style="text-align:center;">Have a question, feedback, or want to work with us? Fill out the form below and we'll get back to you.</p>
 
       <form id="contactForm" class="contact-form" novalidate>
+        <label for="email">Your email</label>
+        <input id="email" name="email" type="email" required aria-required="true" autocomplete="email">
+
         <label for="subject">Subject</label>
         <input id="subject" name="subject" type="text" required aria-required="true">
 
@@ -97,19 +100,57 @@
 
   <script>
   (function(){
-    const form = document.getElementById('contactForm');
-    const msg = document.getElementById('formMessage');
+    var ENDPOINT =
+      'https://eespgchilqpbmtzrxacd.supabase.co/functions/v1/contact-message';
+    var PUBLISHABLE_KEY = 'sb_publishable_cKn_qZ_YbBvfZX0vOdTUVQ_nFJbJ2Nr';
+    var form = document.getElementById('contactForm');
+    var msg = document.getElementById('formMessage');
     function showMessage(text, isError){
       msg.textContent = text;
       msg.style.color = isError ? '#c0392b' : 'var(--accent)';
     }
+    function isValidEmail(v){ return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v); }
     form.addEventListener('submit', function(e){
       e.preventDefault();
-      const subject = document.getElementById('subject').value.trim();
-      const message = document.getElementById('message').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var subject = document.getElementById('subject').value.trim();
+      var message = document.getElementById('message').value.trim();
+      if(!isValidEmail(email)){ showMessage('Please enter a valid email address.', true); return; }
       if(!subject || !message){ showMessage('Please complete all fields.', true); return; }
-      window.location.href = 'mailto:contactsprintvision@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
-      showMessage('Opening your email app to send your message to our team.');
+
+      var button = form.querySelector('button[type="submit"]');
+      var originalLabel = button ? button.textContent : '';
+      if(button){ button.disabled = true; button.textContent = 'Sending\u2026'; }
+      showMessage('', false);
+
+      fetch(ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          apikey: PUBLISHABLE_KEY,
+          Authorization: 'Bearer ' + PUBLISHABLE_KEY,
+        },
+        body: JSON.stringify({ email: email, subject: subject, message: message }),
+      })
+        .then(function(res){
+          return res.json().catch(function(){ return {}; }).then(function(data){
+            return { ok: res.ok, data: data };
+          });
+        })
+        .then(function(result){
+          if(result.ok){
+            form.reset();
+            showMessage('Thanks! Your message has been sent \u2014 we\u2019ll get back to you soon.', false);
+          } else {
+            showMessage((result.data && result.data.error) || 'Something went wrong. Please try again.', true);
+          }
+        })
+        .catch(function(){
+          showMessage('Network error. Please try again.', true);
+        })
+        .then(function(){
+          if(button){ button.disabled = false; button.textContent = originalLabel; }
+        });
     });
   })();
   </script>
