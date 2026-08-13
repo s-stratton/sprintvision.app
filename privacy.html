@@ -39,10 +39,10 @@
     <section class="container policy-content">
       <h1 class="policy-title">Privacy Policy</h1>
 
-      <p class="policy-updated">Last updated: 24 July 2026</p>
+      <p class="policy-updated">Last updated: 7 August 2026</p>
 
       <h3>Overview</h3>
-      <p>This Privacy Policy explains how SprintVision (the “App”) handles your information. We are committed to protecting your privacy and being transparent about what data is used and where it is processed. Your sprint videos are analysed on your device; the App only sends the limited information described below to the cloud services that make accounts, AI reports and subscriptions work.</p>
+      <p>This Privacy Policy explains how SprintVision (the “App”) handles your information. We are committed to protecting your privacy and being transparent about what data is used and where it is processed. Your sprint videos are analysed on your device; the App sends the limited information described below to the cloud services that make accounts, saved-analysis storage, AI reports, training plans and subscriptions work.</p>
 
       <h3>Account Information</h3>
       <p>To use SprintVision you create an account. Depending on how you sign in, we process:</p>
@@ -55,18 +55,22 @@
 
       <h3>Your Videos and Analysis</h3>
       <h4>On-device processing</h4>
-      <p>Sprint videos you upload from your device are analysed entirely on your device. Pose tracking, kinograms and metric measurements are computed locally.</p>
-      <h4>Local storage</h4>
-      <p>Your videos and saved analyses are stored locally on your device, within the App’s private storage. We do not upload your videos or images to our servers.</p>
+      <p>Sprint videos you upload from your device are analysed entirely on your device. Pose tracking, kinograms and metric measurements are computed locally. The original video you select is never uploaded to our servers.</p>
+      <h4>Storage of your analyses</h4>
+      <p>To let you keep your history across devices and after reinstalling the App, the results of an analysis — the generated overlay and skeleton clips, the thumbnail, the kinogram images and the measured metrics — are stored in private cloud storage tied to your account, in addition to a local copy on your device. This content is only accessible to you and is deleted when you delete the analysis or your account. The original source video is not included. Each account has a storage limit, shown in the App’s settings.</p>
 
-      <h3>AI Coaching Reports</h3>
-      <p>When you request an AI coaching report, the App sends only the numeric results of your analysis — such as run phase, speed, stride length, ground contact and joint angles, and (if you provide it) your height — to a secure cloud function we operate. That function uses Google’s Gemini AI to generate the written feedback, which is returned to your device.</p>
+      <h3>AI Coaching Reports and Training Plans</h3>
+      <p>When you request an AI coaching report or an AI training plan, the App sends only the numeric results of your analysis — such as run phase, speed, stride length, ground contact and joint angles, and (if you provide it) your height, event and personal bests — to a secure cloud function we operate. That function uses Google’s Gemini AI to generate the written feedback or plan, which is returned to your device.</p>
       <ul>
         <li>Your video is never uploaded — only the derived metrics are sent</li>
-        <li>Reports are generated on demand and shown in the App</li>
-        <li>A monthly limit on AI reports is enforced by our server</li>
+        <li>Reports and plans are generated on demand and shown in the App</li>
+        <li>A combined monthly limit on AI generations is enforced by our server</li>
       </ul>
       <p>Google processes this data as a service provider under its own terms and privacy policy.</p>
+
+      <h3>Anonymized Performance Metrics</h3>
+      <p>To benchmark performance and improve SprintVision’s coaching, we collect anonymized sprint metrics (such as stride length, ground contact, joint angles and speed), together with non-identifying context like event, age group and category. This data does not include your name, email, videos or images, and is not used to identify you.</p>
+      <p>We may use this anonymized data to produce aggregated, non-identifying insights (for example, typical metric ranges for an event or age group). Aggregated insights never identify any individual.</p>
 
       <h3>Subscriptions</h3>
       <p>Paid features are managed through RevenueCat and the app store you purchase from (the Apple App Store or Google Play). This may involve processing purchase data, subscription status and anonymous identifiers. Payments are handled by the app store — we do not receive or store your payment card details.</p>
@@ -89,9 +93,10 @@
         <li>To manage subscriptions and entitlements</li>
         <li>To send reminders you have opted in to</li>
         <li>To understand our audience and improve the App</li>
+        <li>To produce aggregated, non-identifying insights from anonymized metrics</li>
         <li>To detect, investigate and fix software errors</li>
       </ul>
-      <p>We do not use your data for advertising, and we do not sell your data.</p>
+      <p>We do not use your data for advertising, and we do not sell data that identifies you.</p>
 
       <h3>Permissions</h3>
       <p>The App may request the following permissions, only to provide core functionality:</p>
@@ -112,11 +117,11 @@
       <p>These services operate under their own privacy policies.</p>
 
       <h3>Data Sharing</h3>
-      <p>We do not sell or rent your data. Information is only shared with the service providers above so the App can function, or where required by law.</p>
+      <p>We do not sell or rent data that identifies you. Information is only shared with the service providers above so the App can function, or where required by law. We may share aggregated, non-identifying insights derived from anonymized metrics, which never identify any individual.</p>
 
       <h3>Data Retention and Deletion</h3>
       <ul>
-        <li>Videos and saved analyses remain on your device until you delete them or uninstall the App</li>
+        <li>Saved analyses are stored in your private cloud storage and cached on your device until you delete them</li>
         <li>Your account and associated server-side data are retained until you delete your account</li>
         <li>You can permanently delete your account and its data from within the App (Settings → Delete Account)</li>
         <li>Exported files saved to your gallery must be deleted manually</li>
@@ -124,7 +129,7 @@
       <p>Deleting your account does not automatically cancel a paid subscription — manage that in your app store settings.</p>
 
       <h3>Security</h3>
-      <p>We take reasonable measures to protect your data in transit and at rest. Because your videos and analyses are stored locally, their security also depends on your device’s own protections.</p>
+      <p>We take reasonable measures to protect your data in transit and at rest, including your account’s private cloud storage. No method of transmission or storage is completely secure, and the security of on-device copies also depends on your device’s own protections.</p>
 
       <h3>Children’s Privacy</h3>
       <p>This App is not intended for children under 13. We do not knowingly collect personal data from children.</p>

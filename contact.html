@@ -106,6 +106,8 @@
     var PUBLISHABLE_KEY = 'sb_publishable_cKn_qZ_YbBvfZX0vOdTUVQ_nFJbJ2Nr';
     var form = document.getElementById('contactForm');
     var msg = document.getElementById('formMessage');
+    var prefillSubject = new URLSearchParams(window.location.search).get('subject');
+    if (prefillSubject) { document.getElementById('subject').value = prefillSubject; }
     function showMessage(text, isError){
       msg.textContent = text;
       msg.style.color = isError ? '#c0392b' : 'var(--accent)';
