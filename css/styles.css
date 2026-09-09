@@ -471,18 +471,19 @@ section[id]{
 .report-copy li{margin-bottom:12px;padding-left:26px;position:relative;line-height:1.5}
 .report-copy li::before{content:"";position:absolute;left:0;top:9px;width:14px;height:2px;background:var(--accent)}
 .report-media{display:flex;justify-content:center}
-.report-media .report-phone{width:100%;max-width:560px;display:block;border-radius:18px;filter:drop-shadow(0 26px 50px rgba(15,23,42,0.2))}
+.report-media .report-phone{display:block;width:min(100%, 620px);max-width:620px;height:auto;margin:0 auto;border-radius:18px;filter:drop-shadow(0 26px 50px rgba(15,23,42,0.2))}
 
 @media (max-width:1000px){
   .report-inner{grid-template-columns:1fr;gap:28px}
   .report-copy h2{text-align:center}
   .report-copy p{text-align:center}
   .report-copy ul{width:fit-content;max-width:100%;margin-left:auto;margin-right:auto}
-  .report-media .report-phone{max-width:480px}
+  .report-media .report-phone{width:min(100%, 520px);max-width:520px}
 }
 @media (max-width:700px){
   .metrics{padding-block:44px}
   .report{padding:44px 0}
+  .report-media .report-phone{width:min(100%, 420px);max-width:420px}
 }
 
 /* ------------------------------------------------------------------ */
