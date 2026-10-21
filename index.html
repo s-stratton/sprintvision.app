@@ -3,446 +3,384 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="SprintVision — precise sprint video analysis for athletes and coaches.">
-  <title>SprintVision — Sprint analysis for athletes</title>
+  <title>SprintVision — See every step of your sprint</title>
+  <meta name="description" content="Film one sprint on your iPhone. SprintVision tracks your whole body, measures every step and shows you exactly what to fix to get faster.">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <meta name="theme-color" content="#242424">
-  <!-- Social sharing (Open Graph / Twitter) -->
+  <meta name="theme-color" content="#ffffff">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SprintVision">
-  <meta property="og:title" content="SprintVision — Sprint analysis for athletes">
-  <meta property="og:description" content="Upload one video. See exactly what's costing you speed — and how to fix it.">
-  <meta property="og:image" content="assets/athlete_background.png">
+  <meta property="og:title" content="SprintVision — See every step of your sprint">
+  <meta property="og:description" content="Film one sprint on your iPhone. See every step measured, and exactly what to fix to get faster.">
+  <meta property="og:image" content="https://sprintvision.app/assets/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SprintVision — Sprint analysis for athletes">
-  <meta name="twitter:description" content="Upload one video. See exactly what's costing you speed — and how to fix it.">
-  <meta name="twitter:image" content="assets/athlete_background.png">
+  <meta name="twitter:title" content="SprintVision — See every step of your sprint">
+  <meta name="twitter:description" content="Film one sprint on your iPhone. See every step measured, and exactly what to fix to get faster.">
+  <meta name="twitter:image" content="https://sprintvision.app/assets/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wdth,wght@0,75..125,200..900;1,75..125,200..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <script>
-    /* Enable scroll-reveal only when motion is allowed. Set before paint to avoid any flash. */
-    (function(){
-      try{
-        if(!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-          document.documentElement.classList.add('reveal-enabled');
-        }
-      }catch(e){}
-    })();
-  </script>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <img src="assets/sprint_vision_logo.png" alt="SprintVision logo" class="logo">
-        <span class="brand-text">SprintVision</span>
-      </a>
-      <div class="header-actions">
-        <a href="https://apps.apple.com/ie/app/sprintvision-sprint-analysis/id6782655591" class="app-badge-link" target="_blank" rel="noopener" aria-label="Download SprintVision on the App Store">
-          <img src="assets/Download_On_AppStore.svg" alt="Download SprintVision on the App Store" class="app-badge">
-        </a>
-      </div>
+<body class="home">
+  <header class="top">
+    <div class="wrap top-inner">
+      <a href="index.html" class="brand"><img src="assets/sprint_vision_logo.png" alt="" width="32" height="32"><span>SprintVision</span></a>
+      <nav class="top-nav" aria-label="Main">
+        <a href="#how">How it works</a>
+        <a href="#steps">Every step</a>
+        <a href="#fix">What to fix</a>
+        <a href="#filming">Filming</a>
+      </nav>
+      <a class="btn btn-ink" href="https://apps.apple.com/ie/app/sprintvision-sprint-analysis/id6782655591" target="_blank" rel="noopener">Get the app</a>
     </div>
   </header>
 
   <main>
+    <!-- Hero: the real analysis, playing -->
     <section class="hero">
-      <div class="container hero-inner">
+      <div class="wrap hero-grid">
         <div class="hero-copy">
-          <h1>Stop Guessing. Start Getting Faster.</h1>
-          <h3 class="hero-sub">Upload one video. See exactly what's costing you speed — and how to fix it.</h3>
-          <div class="hero-ctas">
-            <a href="https://apps.apple.com/ie/app/sprintvision-sprint-analysis/id6782655591" class="app-badge-link" target="_blank" rel="noopener" aria-label="Download SprintVision on the App Store">
-              <img src="assets/Download_On_AppStore.svg" alt="Download SprintVision on the App Store" class="app-badge">
-            </a>
+          <a class="tag" href="#filming"><span class="tag-dot"></span>New: film from any angle, even handheld</a>
+          <h1>Film one sprint.<br><em>See every step.</em></h1>
+          <p class="hero-sub">SprintVision turns a video from your iPhone into a step-by-step breakdown of your sprint, and shows you exactly what to fix to get faster.</p>
+          <div class="cta" data-hero-cta>
+            <a class="store" href="https://apps.apple.com/ie/app/sprintvision-sprint-analysis/id6782655591" target="_blank" rel="noopener"><img src="assets/Download_On_AppStore.svg" alt="Download on the App Store" width="150" height="50"></a>
+            <span class="cta-note">Free trial<br>iPhone</span>
           </div>
-          <!-- quick features removed per request -->
-        </div>
-        <div class="hero-media">
-          <img src="assets/iphone%20front-6.png" alt="SprintVision sprint analysis results on iPhone" class="phone">
-        </div>
-      </div>
-    </section>
-
-    <section id="features" class="features container">
-      <div class="features-grid">
-        <article class="feature">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="5" y="6" width="12" height="12" rx="1.5"/>
-              <path d="M17.5 9.5 L20.5 8 L20.5 16 L17.5 14.5"/>
-              <circle cx="11" cy="12" r="1.4"/>
-            </svg>
+          <div class="proof">
+            <span class="faces" aria-hidden="true"><img src="assets/israel_pfp.jpg" alt=""><img src="assets/bori.jpeg" alt=""><img src="assets/Default_pfp.jpg" alt=""></span>
+            <span>Trusted by national record holders and Olympic sprinters</span>
           </div>
-          <h3>See Where You Lose Speed</h3>
-          <p>The exact moments slowing you down, tracked through every step.</p>
-        </article>
+        </div>
 
-        <article class="feature">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <g transform="translate(0,4)">
-              <rect x="5" y="6" width="3.5" height="11" rx="0.6" stroke="currentColor" fill="none" stroke-width="1" stroke-linejoin="round"/>
-              <rect x="10.25" y="4" width="3.5" height="13" rx="0.6" stroke="currentColor" fill="none" stroke-width="1" stroke-linejoin="round"/>
-              <rect x="15.5" y="2" width="3.5" height="15" rx="0.6" stroke="currentColor" fill="none" stroke-width="1" stroke-linejoin="round"/>
-              </g>
-            </svg>
+        <div class="stage">
+          <figure class="player" id="player">
+            <video muted playsinline loop preload="auto" poster="assets/run/hero-poster.jpg" aria-label="A block start filmed handheld, with SprintVision's tracking, footprints and step lengths"></video>
+            <div class="player-chip"><i data-chip-dot></i><span data-chip>Set position</span></div>
+            <div class="player-speed">¼× speed</div>
+            <button class="player-play" type="button" aria-label="Play the video" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>
+            </button>
+            <div class="player-bar" aria-hidden="true">
+              <span class="player-time" data-time>0.88 s</span>
+              <div class="player-track"><div class="player-ticks" data-ticks></div><div class="player-head" data-head></div></div>
+            </div>
+          </figure>
+
+          <div class="readout" aria-live="off">
+            <div class="ro-row"><span class="label">Step <b data-ro-n>–</b> of <span data-ro-total>18</span></span><span class="ro-foot" data-ro-foot></span></div>
+            <div class="ro-big"><span data-ro-len>–</span><small>m</small></div>
+            <div class="ro-meta"><span>Contact<b data-ro-contact>–</b></span><span>Flight<b data-ro-flight>–</b></span></div>
+            <div class="ro-bars" data-ro-bars></div>
           </div>
-          <h3>Know What to Fix First</h3>
-          <p>Every part of your sprint rated, so you train what actually makes you faster.</p>
-        </article>
+          <p class="stage-note">A real block start, filmed handheld and analysed by SprintVision. Shown at quarter speed.</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- How it works -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="kicker">How it works</p>
+          <h2>From the track to your breakdown in three steps.</h2>
+        </div>
+        <ol class="how">
+          <li class="how-card reveal">
+            <div class="how-media how-film">
+              <img src="assets/run/film.jpg" alt="An athlete driving out of the blocks, filmed side-on" loading="lazy" width="800" height="1000">
+              <span class="rec"><i></i>REC</span>
+              <span class="corners" aria-hidden="true"></span>
+            </div>
+            <span class="how-n">1</span>
+            <h3>Film a rep</h3>
+            <p>A block start, acceleration or flying run. Side-on is best, but you can hold the phone and follow the run.</p>
+          </li>
+          <li class="how-card reveal">
+            <div class="how-media how-trim" aria-hidden="true">
+              <div class="trim-time">0:05.6</div>
+              <div class="trim-label">Trim to the run</div>
+              <div class="trim">
+                <img src="assets/run/filmstrip.jpg" alt="" loading="lazy" width="1080" height="192">
+                <span class="trim-frame"></span>
+              </div>
+              <div class="trim-btn">Analyse</div>
+            </div>
+            <span class="how-n">2</span>
+            <h3>Pick the clip</h3>
+            <p>Choose the video from your camera roll and trim it to the run.</p>
+          </li>
+          <li class="how-card reveal">
+            <div class="how-media how-app">
+              <div class="phone"><img src="assets/screens/analysis.jpg" alt="The SprintVision analysis screen: the run with tracking, the step timeline and the run's numbers" loading="lazy" width="780" height="1688"></div>
+            </div>
+            <span class="how-n">3</span>
+            <h3>See every step</h3>
+            <p>SprintVision tracks your whole body, times every step and rates your positions.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-        <article class="feature">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-              <!-- scale up bulb slightly while preserving strokes -->
-              <g transform="translate(0,0.6) scale(1.05)">
-              <!-- filament -->
-              <!-- base -->
-              <!-- Round bulb -->
-              <path vector-effect="non-scaling-stroke" stroke-width="2" transform="translate(-0.4 0)" d="M12 4.2c-1.9 0-3.6 1.3-4 3.1-.3 1.2.1 2.1.8 3 .6.8 1 1.4 1 2.5v0.4c0 .5.4.9.9.9h3.6c.5 0 .9-.4.9-.9v-0.4c0-1.1.4-1.7 1-2.5.7-.9 1.1-1.8.8-3-.4-1.8-2.1-3.1-4-3.1z"/>
-                            <path vector-effect="non-scaling-stroke" stroke-width="2" d="M10.5 10.8c.5.4 1 .7 1.5.7s1-.3 1.5-.7"/>
-                            <rect vector-effect="non-scaling-stroke" stroke-width="2" x="9.5" y="14.2" width="5" height="1.5" rx="0.4"/>
-                            <line vector-effect="non-scaling-stroke" stroke-width="2" x1="10" y1="15.8" x2="14" y2="15.8"/>
-                            <!-- screw -->
-                            <line vector-effect="non-scaling-stroke" stroke-width="2" x1="11" y1="16.6" x2="13" y2="16.6"/>
-              </g>
-            </svg>
+    <!-- Every step: the real run, explorable -->
+    <section class="section section-tint" id="steps">
+      <div class="wrap">
+        <div class="head head-split reveal">
+          <div>
+            <p class="kicker">Every step</p>
+            <h2>A breakdown of every step.</h2>
           </div>
-          <h3>Coaching That Tells You How</h3>
-          <p>Personal feedback with the exact cues and drills to fix each fault.</p>
-        </article>
+          <p>See the length, ground contact, flight time and speed of each step, and watch your acceleration build from the blocks to top speed.</p>
+        </div>
 
-        <article class="feature">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <defs>
-                <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="8" orient="auto">
-                  <!-- outlined arrowhead with rounded edges -->
-                  <path d="M1,1 L9,5 L1,9" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
-                </marker>
-              </defs>
-              <polyline points="3 18 9 6 13 18 20 6" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" stroke-width="1"/>
-            </svg>
+        <div class="explorer reveal" data-explorer>
+          <figure class="ex-photo">
+            <img src="assets/run/steps/step-05.jpg" alt="" width="640" height="800" data-ex-img>
+            <figcaption class="player-chip"><i data-ex-dot></i><span data-ex-chip>Step 5 · Left</span></figcaption>
+          </figure>
+          <div class="ex-panel">
+            <div class="tabs" role="tablist" aria-label="Measure">
+              <button role="tab" aria-selected="true" data-measure="len">Length</button>
+              <button role="tab" aria-selected="false" data-measure="contact">Contact</button>
+              <button role="tab" aria-selected="false" data-measure="flight">Flight</button>
+              <button role="tab" aria-selected="false" data-measure="speed">Speed</button>
+            </div>
+            <div class="ex-head">
+              <div class="ex-value"><span data-ex-value>1.57</span><small data-ex-unit>m</small></div>
+              <div class="ex-label" data-ex-label>Step length</div>
+            </div>
+            <div class="ex-chart">
+              <div class="ex-bars" data-ex-bars role="group" aria-label="Steps, tap one to see it"></div>
+              <div class="ex-axis" data-ex-axis></div>
+            </div>
+            <dl class="ex-stats" data-ex-stats></dl>
+            <p class="ex-note">Tap a bar to see that step. Contact and flight times are estimates.</p>
           </div>
-          <h3>Watch Your Times Drop</h3>
-          <p>Track every run and watch your progress stack up.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Detailed feature sections inserted below -->
-
-    <section id="how" class="detail container">
-      <div class="detail-grid">
-        <div class="detail-media">
-          <img src="assets/sprint_results_1783864061517%202.PNG" alt="SprintVision sprint analysis metrics report" class="detail-img small">
-        </div>
-        <div class="detail-copy">
-          <h2>One Clip. Is All It Takes.</h2>
-          <p>No sensors, no lab. Upload one clip and SprintVision turns it into a full breakdown of what's making you fast — and what's holding you back.</p>
-          <h4>What you get</h4>
-          <ul>
-            <li>See every step with full-body tracking</li>
-            <li>Compare your positions in a step-by-step kinogram</li>
-            <li>Rated metrics on what actually decides your speed</li>
-            <li>A personal report with cues and drills to fix it</li>
-            <li>Exportable reports, kinograms and videos to share</li>
-          </ul>
         </div>
       </div>
     </section>
 
-    <section id="metrics" class="metrics container">
-      <h2>Nothing Slowing You Down Stays Hidden</h2>
-      <p class="metrics-lead">Every mechanic that decides your speed, measured and rated — so you know exactly what to work on.</p>
-      <div class="metric-chips">
-        <span class="metric-chip"><span class="dot"></span>10m Speed</span>
-        <span class="metric-chip"><span class="dot"></span>10m Run Time</span>
-        <span class="metric-chip"><span class="dot"></span>Ground Contact</span>
-        <span class="metric-chip"><span class="dot"></span>Flight Time</span>
-        <span class="metric-chip"><span class="dot"></span>Stride Length</span>
-        <span class="metric-chip"><span class="dot"></span>Knee Lift</span>
-        <span class="metric-chip"><span class="dot"></span>Torso Lean</span>
-        <span class="metric-chip"><span class="dot"></span>Ankle Angle</span>
-        <span class="metric-chip"><span class="dot"></span>Foot Strike</span>
-        <span class="metric-chip"><span class="dot"></span>Arm Action</span>
-      </div>
-    </section>
-
-    <section id="reports" class="report">
-      <div class="report-inner">
-        <div class="report-copy">
-          <h2>Like a Sprint Coach in Your Pocket</h2>
-          <p>You don't just get numbers — you get answers. A report on what's holding you back, and how to fix it.</p>
-          <ul>
-            <li>Understand exactly what your run is telling you</li>
-            <li>Get coaching cues you can actually feel</li>
-            <li>Fix each fault with targeted drills and training plans</li>
-            <li>Track your progress over time with detailed analytics</li>
-          </ul>
+    <!-- What to fix -->
+    <section class="section" id="fix">
+      <div class="wrap fix">
+        <figure class="fix-photo reveal">
+          <img src="assets/run/set.jpg" alt="The athlete in the set position with the front and rear knee and hip angles marked" loading="lazy" width="800" height="1000">
+          <figcaption class="player-chip"><i class="dot-ink"></i><span>Set position</span></figcaption>
+        </figure>
+        <div class="fix-copy">
+          <div class="head reveal">
+            <p class="kicker">What to fix</p>
+            <h2>Know exactly what to work on next.</h2>
+            <p>Your set position, drive phase and arm action are rated against targets from sprint research, with a cue for anything outside the range.</p>
+          </div>
+          <div class="ratings">
+            <article class="rating reveal" style="--lo:85;--hi:105;--v:108;--min:70;--max:130">
+              <div class="rating-top"><h3>Set: front knee</h3><span class="rating-val">108°</span><span class="badge badge-ok">OK</span></div>
+              <div class="band"><span class="band-target"></span><span class="band-mark"></span></div>
+              <p class="rating-target">Target 85–105° · 3° straighter than the target</p>
+              <p class="cue">Lower the hips slightly, or bring the front block a little closer to the line.</p>
+            </article>
+            <article class="rating reveal" style="--lo:35;--hi:50;--v:54;--min:20;--max:65">
+              <div class="rating-top"><h3>Torso lean, first steps</h3><span class="rating-val">54°</span><span class="badge badge-ok">OK</span></div>
+              <div class="band"><span class="band-target"></span><span class="band-mark"></span></div>
+              <p class="rating-target">Target 35–50° · 4° more lean than the target</p>
+              <p class="cue">Cue: “push the ground away”, not “fall forward”.</p>
+            </article>
+            <article class="rating reveal" style="--lo:120;--hi:175;--v:146;--min:80;--max:180">
+              <div class="rating-top"><h3>Arm swing</h3><span class="rating-val">146°</span><span class="badge badge-good">Good</span></div>
+              <div class="band"><span class="band-target"></span><span class="band-mark"></span></div>
+              <p class="rating-target">Target 120° or more · In the target range</p>
+              <p class="cue">Big arm swing that balances the legs.</p>
+            </article>
+            <article class="rating reveal" style="--lo:35;--hi:52;--v:52;--min:20;--max:70">
+              <div class="rating-top"><h3>Set: front hip</h3><span class="rating-val">52°</span><span class="badge badge-good">Good</span></div>
+              <div class="band"><span class="band-target"></span><span class="band-mark"></span></div>
+              <p class="rating-target">Target 35–52° · In the target range</p>
+              <p class="cue">In the typical range for a powerful first push.</p>
+            </article>
+          </div>
+          <div class="cta reveal">
+            <a class="store" href="https://apps.apple.com/ie/app/sprintvision-sprint-analysis/id6782655591" target="_blank" rel="noopener"><img src="assets/Download_On_AppStore.svg" alt="Download on the App Store" width="150" height="50" loading="lazy"></a>
+            <span class="cta-note">Rate your own start<br>Free trial</span>
+          </div>
         </div>
-        <div class="report-media">
-          <img src="assets/phones.png" alt="SprintVision analysis report with coaching cues and drills on iPhone" class="report-phone">
+      </div>
+    </section>
+
+    <!-- Athletes -->
+    <section class="section section-tint" id="athletes">
+      <div class="wrap">
+        <div class="quotes">
+          <figure class="quote quote-main reveal">
+            <blockquote>“Everything is very clear, which is important during sessions so you’re not wasting time or getting stressed about figuring out what the analysis says.”</blockquote>
+            <figcaption>
+              <img src="assets/israel_pfp.jpg" alt="" width="56" height="56" loading="lazy">
+              <span><b>Israel Olatunde</b>adidas athlete · 100m national record holder (10.08 s) · European 100m finalist</span>
+            </figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <blockquote>“It freezes the run at all the right moments.”</blockquote>
+            <figcaption>
+              <img src="assets/Default_pfp.jpg" alt="" width="44" height="44" loading="lazy">
+              <span><b>Olympic sprinter</b>Name withheld by request</span>
+            </figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <blockquote>“Oh, that’s pretty cool.”</blockquote>
+            <figcaption>
+              <img src="assets/bori.jpeg" alt="" width="44" height="44" loading="lazy">
+              <span><b>Bori Akinola</b>60m national record holder (6.54 s) · World Indoor 60m semi-finalist</span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section id="testimonials" class="testimonials container">
-      <h2>What Athletes Think of SprintVision</h2>
-      <div class="test-grid">
-        <blockquote>
-          “It freezes the run at all the right moments.”
-          <footer class="test-author">
-            <span class="test-avatar"><img src="assets/Default_pfp.jpg" alt="Olympic sprinter"></span>
-            <span class="test-meta">
-              <span class="test-name">Olympic sprinter</span>
-              <span class="test-role">Name withheld by request</span>
-            </span>
-          </footer>
-        </blockquote>
-        <blockquote>
-          “It’s cool how the different data points are presented in an easy digestible way. Everything is very clear which is important during sessions so you’re not wasting time or getting stressed about figuring out what the analysis says.”
-          <footer class="test-author">
-            <span class="test-avatar"><img src="assets/israel_pfp.jpg" alt="Israel Olatunde"></span>
-            <span class="test-meta">
-              <span class="test-name">Israel Olatunde</span>
-              <span class="test-role">adidas athlete · Irish 100m national record holder (10.08s) &amp; European 100m finalist</span>
-            </span>
-          </footer>
-        </blockquote>
-        <blockquote>
-          “oh that’s pretty cool”
-          <footer class="test-author">
-            <span class="test-avatar"><img src="assets/bori.jpeg" alt="Bori Akinola"></span>
-            <span class="test-meta">
-              <span class="test-name">Bori Akinola</span>
-              <span class="test-role">Irish 60m national record holder (6.54s) &amp; World Indoor 60m semi-finalist</span>
-            </span>
-          </footer>
-        </blockquote>
+    <!-- Filming -->
+    <section class="section" id="filming">
+      <div class="wrap">
+        <div class="head head-split reveal">
+          <div>
+            <p class="kicker">Filming</p>
+            <h2>Just press record.</h2>
+          </div>
+          <p>Film side-on, follow the run down the track, or film from behind. SprintVision keeps tracking you as the camera moves, so you can film however suits your session.</p>
+        </div>
+        <div class="angles">
+          <figure class="reveal"><img src="assets/run/angle-side.jpg" alt="Side-on view of the first step out of the blocks, with tracking" loading="lazy" width="600" height="800"><figcaption class="player-chip"><span>Side-on</span></figcaption></figure>
+          <figure class="reveal"><img src="assets/run/angle-pan.jpg" alt="The same run as the camera turns to follow it" loading="lazy" width="600" height="800"><figcaption class="player-chip"><span>Following the run</span></figcaption></figure>
+          <figure class="reveal"><img src="assets/run/angle-behind.jpg" alt="The same run filmed from behind, still tracked step by step" loading="lazy" width="600" height="800"><figcaption class="player-chip"><span>From behind</span></figcaption></figure>
+        </div>
+        <ul class="tips reveal">
+          <li><b>On the straight.</b> Film runs on the straight, not around the bend.</li>
+          <li><b>Head to feet.</b> Keep the whole athlete in shot for the whole run.</li>
+          <li><b>Not too far away.</b> The athlete should fill a good part of the screen.</li>
+          <li><b>One athlete.</b> Keep other people out of the shot.</li>
+          <li><b>Real-time video.</b> Film at normal speed so every step is timed accurately.</li>
+          <li><b>Want a split?</b> Keep the start and finish in shot, then mark them on the video.</li>
+        </ul>
       </div>
     </section>
 
-    <section class="cta-banner">
-      <div class="container">
-        <h2>Your Next PB Starts With One Video</h2>
-        <p class="lead">Download SprintVision and start getting faster.</p>
-        <a href="https://apps.apple.com/ie/app/sprintvision-sprint-analysis/id6782655591" class="app-badge-link" target="_blank" rel="noopener" aria-label="Download SprintVision on the App Store">
-          <img src="assets/Download_On_AppStore.svg" alt="Download SprintVision on the App Store" class="app-badge">
-        </a>
+    <!-- Beyond the video -->
+    <section class="section section-tint" id="train">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="kicker">Train with it</p>
+          <h2>Plan your week. Share your runs.</h2>
+        </div>
+        <div class="more">
+          <article class="more-card reveal">
+            <div class="mini mini-cal" aria-hidden="true">
+              <div class="mini-head"><b>This week</b><span>Oct</span></div>
+              <div class="cal-row"><span class="cal-day">Mon<b>20</b></span><span class="cal-ev ev-train">Acceleration<em>Training · 17:00</em></span></div>
+              <div class="cal-row"><span class="cal-day">Tue<b>21</b></span><span class="cal-ev ev-gym">Lower body strength<em>Gym · 07:30</em></span></div>
+              <div class="cal-row"><span class="cal-day">Thu<b>23</b></span><span class="cal-ev ev-physio">Physio<em>12:15</em></span></div>
+              <div class="cal-row"><span class="cal-day">Sat<b>25</b></span><span class="cal-ev ev-race">Race<em>All day</em></span></div>
+            </div>
+            <h3>Plan your whole week</h3>
+            <p>Training, gym, races and physio in one calendar, with reminders.</p>
+          </article>
+          <article class="more-card reveal">
+            <div class="mini mini-session" aria-hidden="true">
+              <div class="mini-head"><b>Acceleration</b><span>Exercise 2 of 5</span></div>
+              <div class="set-title">Block starts · 30 m</div>
+              <div class="set done"><i></i>Set 1</div>
+              <div class="set done"><i></i>Set 2</div>
+              <div class="set now"><i></i>Set 3<span class="rest">Rest 2:41</span></div>
+              <div class="set"><i></i>Set 4</div>
+            </div>
+            <h3>Every session, set by set</h3>
+            <p>Tick off every set, with your rest timed for you.</p>
+          </article>
+          <article class="more-card reveal">
+            <div class="mini mini-pdf" aria-hidden="true">
+              <div class="pdf">
+                <div class="pdf-top"><img src="assets/sprint_vision_logo.png" alt=""><b>Sprint report</b></div>
+                <div class="pdf-stats"><span><em>Steps</em>17</span><span><em>Step rate</em>4.30/s</span><span><em>Step length</em>1.92 m</span></div>
+                <div class="pdf-bars"><i style="--h:43"></i><i style="--h:51"></i><i style="--h:56"></i><i style="--h:63"></i><i style="--h:66"></i><i style="--h:70"></i><i style="--h:72"></i><i style="--h:79"></i><i style="--h:79"></i><i style="--h:85"></i><i style="--h:85"></i><i style="--h:89"></i><i style="--h:87"></i><i style="--h:92"></i><i style="--h:94"></i><i style="--h:100"></i></div>
+                <div class="pdf-lines"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <h3>Share it with your coach</h3>
+            <p>Export a PDF report with every step and every metric, or the video with the tracking drawn on.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- Back to top button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-        <polyline points="18 15 12 9 6 15"></polyline>
-      </svg>
-    </button>
+    <!-- Final call to action -->
+    <section class="final" id="download">
+      <div class="wrap">
+        <div class="final-card">
+          <div class="final-copy">
+            <h2>Your next PB starts with one video.</h2>
+            <p>Download SprintVision and see every step of your next run.</p>
+            <div class="cta">
+              <a class="store" href="https://apps.apple.com/ie/app/sprintvision-sprint-analysis/id6782655591" target="_blank" rel="noopener"><img src="assets/Download_On_AppStore.svg" alt="Download on the App Store" width="150" height="50" loading="lazy"></a>
+              <span class="cta-note">Free trial<br>Cancel any time</span>
+            </div>
+          </div>
+          <div class="final-phones" aria-hidden="true">
+            <div class="phone"><img src="assets/screens/steps.jpg" alt="" loading="lazy" width="780" height="1688"></div>
+            <div class="phone"><img src="assets/screens/analysis.jpg" alt="" loading="lazy" width="780" height="1688"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="coach">
+      <div class="wrap">
+        <div class="coach-inner">
+          <p><b>Coach a squad?</b> The Coach plan covers up to 5 athletes and the Club plan up to 25, with every athlete’s analyses in one place and sessions for the whole team.</p>
+          <a class="link" href="contact.html?subject=Custom%20plan%20(25%2B%20athletes)">More than 25 athletes? Ask about a custom plan <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-row">
-        <div class="footer-brand">
-          <div class="footer-brand-top">
-            <img src="assets/sprint_vision_logo.png" alt="SprintVision logo" class="footer-logo">
-            <div class="footer-brand-text">SprintVision</div>
-          </div>
-          <p class="footer-tagline">Stop guessing. Start getting faster.</p>
-          <a href="https://apps.apple.com/ie/app/sprintvision-sprint-analysis/id6782655591" class="app-badge-link" target="_blank" rel="noopener" aria-label="Download SprintVision on the App Store">
-            <img src="assets/Download_On_AppStore.svg" alt="Download SprintVision on the App Store" class="app-badge footer-badge">
-          </a>
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <a href="index.html" class="brand"><img src="assets/sprint_vision_logo.png" alt="" width="32" height="32"><span>SprintVision</span></a>
+          <p>Stop guessing. Start getting faster.</p>
+          <a class="store" href="https://apps.apple.com/ie/app/sprintvision-sprint-analysis/id6782655591" target="_blank" rel="noopener"><img src="assets/Download_On_AppStore.svg" alt="Download on the App Store" width="135" height="45" loading="lazy"></a>
         </div>
-
-        <div class="footer-groups">
-          <nav class="footer-col" aria-label="Company">
-            <h4>Company</h4>
-            <a href="contact.html">Contact Us</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Use</a>
-          </nav>
-
-          <nav class="footer-col" aria-label="Follow">
-            <h4>Follow</h4>
-            <a href="https://vm.tiktok.com/ZNRoRgNN7/" target="_blank" rel="noopener">TikTok</a>
-            <a href="https://www.instagram.com/sprintvisionapp" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://x.com/sprintvisionapp" target="_blank" rel="noopener">X</a>
-          </nav>
-        </div>
+        <nav class="foot-col" aria-label="Product">
+          <h4>Product</h4>
+          <a href="index.html#how">How it works</a>
+          <a href="index.html#steps">Every step</a>
+          <a href="index.html#fix">What to fix</a>
+          <a href="index.html#filming">Filming tips</a>
+        </nav>
+        <nav class="foot-col" aria-label="Company">
+          <h4>Company</h4>
+          <a href="contact.html">Contact us</a>
+          <a href="privacy.html">Privacy policy</a>
+          <a href="terms.html">Terms of use</a>
+        </nav>
+        <nav class="foot-col" aria-label="Follow">
+          <h4>Follow</h4>
+          <a href="https://vm.tiktok.com/ZNRoRgNN7/" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.instagram.com/sprintvisionapp" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://x.com/sprintvisionapp" target="_blank" rel="noopener">X</a>
+        </nav>
       </div>
-
-      <hr class="footer-divider">
-      <div class="footer-bottom">
-        <p class="muted">© 2026 <strong>SprintVision</strong>. All Rights Reserved.</p>
-      </div>
+      <p class="foot-legal">© 2026 SprintVision. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>
-  (function(){
-    // Scroll-reveal animations (only when enabled + supported; otherwise content just shows)
-    (function initReveal(){
-      if(!document.documentElement.classList.contains('reveal-enabled')) return;
-      var selector = [
-        '.hero-copy', '.hero-media',
-        '.features-grid .feature',
-        '.detail-media', '.detail-copy',
-        '#metrics > h2', '#metrics .metrics-lead', '.metric-chip',
-        '.report-copy', '.report-media',
-        '#testimonials > h2', '.test-grid',
-        '.cta-banner h2', '.cta-banner .lead', '.cta-banner .app-badge-link'
-      ].join(',');
-      var els = Array.prototype.slice.call(document.querySelectorAll(selector));
-      if(!els.length) return;
+  <div class="sticky" data-sticky>
+    <img src="assets/sprint_vision_logo.png" alt="" width="36" height="36">
+    <span class="sticky-text"><b>SprintVision</b><span>Free trial · iPhone</span></span>
+    <a href="https://apps.apple.com/ie/app/sprintvision-sprint-analysis/id6782655591" target="_blank" rel="noopener">Get the app</a>
+  </div>
 
-      // No IntersectionObserver support -> just show everything.
-      if(!('IntersectionObserver' in window)){
-        els.forEach(function(el){ el.classList.add('is-visible'); });
-        return;
-      }
-
-      // Stagger elements that share a parent (e.g. feature cards, metric chips).
-      var groups = new Map();
-      els.forEach(function(el){
-        var p = el.parentNode;
-        if(!groups.has(p)) groups.set(p, 0);
-        var i = groups.get(p);
-        el.dataset.revealIndex = i;
-        groups.set(p, i + 1);
-      });
-
-      function reveal(el){
-        var i = parseInt(el.dataset.revealIndex || '0', 10);
-        el.style.animationDelay = Math.min(i * 70, 420) + 'ms';
-        el.classList.add('is-visible');
-      }
-
-      var observerFired = false;
-      var io = new IntersectionObserver(function(entries, obs){
-        entries.forEach(function(entry){
-          if(entry.isIntersecting){
-            observerFired = true;
-            reveal(entry.target);
-            obs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-
-      els.forEach(function(el){ io.observe(el); });
-
-      // Safety net: if the observer never fires (unusual environments), reveal
-      // everything so content can never get stuck hidden.
-      setTimeout(function(){
-        if(!observerFired){ els.forEach(function(el){ el.classList.add('is-visible'); }); }
-      }, 2500);
-    })();
-
-    // Back to top button
-    const backToTopBtn = document.getElementById('back-to-top');
-    if(backToTopBtn){
-      window.addEventListener('scroll', function(){
-        if(window.scrollY > 300){
-          backToTopBtn.classList.add('visible');
-        } else {
-          backToTopBtn.classList.remove('visible');
-        }
-      });
-      backToTopBtn.addEventListener('click', function(){
-        window.scrollTo({top:0, behavior:'smooth'});
-      });
-    }
-
-    // Testimonials carousel on medium/small screens (autoplay + swipe + dots)
-    const testGrid = document.querySelector('.test-grid');
-    if(testGrid){
-      const testimonials = Array.from(testGrid.querySelectorAll('blockquote'));
-      if(testimonials.length > 1){
-        let currentIndex = 0;
-        let autoplayInterval = null;
-        const autoplayDelay = 5000;
-        let userInteracted = false;
-        let resumeTimer = null;
-
-        function showTestimonial(index){
-          index = ((index % testimonials.length) + testimonials.length) % testimonials.length;
-          currentIndex = index;
-          testimonials.forEach((t,i)=> t.classList.toggle('active', i === index));
-          updateDots();
-        }
-
-        // create dots UI
-        const dotsContainer = document.createElement('div');
-        dotsContainer.className = 'test-dots';
-        dotsContainer.setAttribute('role','tablist');
-        testimonials.forEach((t,i)=>{
-          const btn = document.createElement('button');
-          btn.className = 'test-dot';
-          btn.setAttribute('aria-label', `Show review ${i+1}`);
-          btn.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
-          btn.addEventListener('click', ()=>{
-            userInteracted = true;
-            stopAutoplay();
-            showTestimonial(i);
-            scheduleResume();
-          });
-          dotsContainer.appendChild(btn);
-        });
-        testGrid.parentNode.insertBefore(dotsContainer, testGrid.nextSibling);
-
-        function updateDots(){
-          const dots = dotsContainer.querySelectorAll('.test-dot');
-          dots.forEach((d,i)=>{
-            d.classList.toggle('active', i === currentIndex);
-            d.setAttribute('aria-pressed', i === currentIndex ? 'true' : 'false');
-          });
-        }
-
-        function startAutoplay(){
-          stopAutoplay();
-          autoplayInterval = setInterval(()=>{
-            if(!userInteracted){
-              showTestimonial(currentIndex + 1);
-            }
-          }, autoplayDelay);
-        }
-        function stopAutoplay(){
-          if(autoplayInterval){ clearInterval(autoplayInterval); autoplayInterval = null; }
-          if(resumeTimer){ clearTimeout(resumeTimer); resumeTimer = null; }
-        }
-        function scheduleResume(){
-          if(resumeTimer) clearTimeout(resumeTimer);
-          // after a short idle period, resume autoplay
-          resumeTimer = setTimeout(()=>{ userInteracted = false; startAutoplay(); }, 8000);
-        }
-
-        // Swipe handling (pointer events with touch fallback)
-        let startX = 0; let startY = 0; let isDown = false; const threshold = 40;
-        function onDown(e){ if(window.innerWidth > 1000) return; isDown = true; startX = e.clientX !== undefined ? e.clientX : (e.touches && e.touches[0] && e.touches[0].clientX); startY = e.clientY !== undefined ? e.clientY : (e.touches && e.touches[0] && e.touches[0].clientY); userInteracted = true; stopAutoplay(); }
-        function onUp(e){ if(!isDown) return; isDown = false; const endX = e.clientX !== undefined ? e.clientX : (e.changedTouches && e.changedTouches[0] && e.changedTouches[0].clientX); const endY = e.clientY !== undefined ? e.clientY : (e.changedTouches && e.changedTouches[0] && e.changedTouches[0].clientY); const dx = endX - startX; const dy = endY - startY; if(Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > threshold){ if(dx < 0){ showTestimonial(currentIndex + 1); } else { showTestimonial(currentIndex - 1); } } scheduleResume(); }
-
-        if(window.PointerEvent){
-          testGrid.addEventListener('pointerdown', onDown, {passive:true});
-          window.addEventListener('pointerup', onUp, {passive:true});
-        } else {
-          testGrid.addEventListener('touchstart', onDown, {passive:true});
-          testGrid.addEventListener('touchend', onUp, {passive:true});
-        }
-
-        // initialize
-        showTestimonial(0);
-        if(window.innerWidth <= 1000) startAutoplay();
-        window.addEventListener('resize', function(){ if(window.innerWidth <= 1000){ if(!autoplayInterval) startAutoplay(); } else { stopAutoplay(); } });
-      }
-    }
-
-  })();
-  </script>
-  <script src="js/waitlist.js" defer></script>
+  <script src="js/run.js"></script>
+  <script src="js/site.js" defer></script>
+  <script src="js/home.js" defer></script>
 </body>
 </html>
