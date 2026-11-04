@@ -17,3 +17,13 @@ Files created:
 - `css/styles.css` — theme and responsive styles
 - `assets/` — placeholder SVGs for logo and screenshots
 - `assets/` — placeholder assets. Place your PNG logo at `assets/sprint_vision_logo.png` (file name expected by the markup).
+
+## Blog
+
+Posts live in `_blog/posts/*.html`: a JSON header in an HTML comment (title, description, date, image, summary, FAQ, related posts), then the article body. After adding or editing a post, run:
+
+```bash
+python3 _blog/build.py
+```
+
+This regenerates `blog/` (every post and the index), `sitemap.xml` and `llms.txt`. Edit the files in `_blog/`, not the generated HTML. Jekyll skips `_blog/`, so it isn't published.

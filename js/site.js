@@ -7,6 +7,25 @@
     onScroll();
   }
 
+  // Blog pages: the phone download bar shows once the reader is into the
+  // article and hides at the in-article download card and the footer.
+  // (The home page has its own rules in home.js.)
+  var bar = document.querySelector('[data-sticky]');
+  if (bar && document.body.classList.contains('blog')) {
+    var stops = document.querySelectorAll('.post-cta, .foot');
+    var update = function () {
+      var show = window.scrollY > 500;
+      for (var i = 0; i < stops.length; i++) {
+        var r = stops[i].getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) show = false;
+      }
+      bar.classList.toggle('show', show);
+    };
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
   var items = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
   if (!items.length) return;
   if (!('IntersectionObserver' in window)) {

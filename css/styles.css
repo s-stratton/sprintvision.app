@@ -77,6 +77,8 @@ h3{font-size:1.2rem;letter-spacing:-0.015em;line-height:1.2}
 .faces{display:flex;flex-shrink:0}
 .faces img{width:36px;height:36px;border-radius:50%;object-fit:cover;border:2.5px solid #fff;margin-left:-10px}
 .faces img:first-child{margin-left:0}
+.proof a{text-decoration:none}
+.proof a:hover{color:var(--ink);text-decoration:underline}
 
 .stage{position:relative;display:flex;flex-direction:column;align-items:flex-end}
 .player{position:relative;width:380px;aspect-ratio:9/16;border-radius:30px;overflow:hidden;background:#d9d4cf url("../assets/run/hero-poster.jpg") center/cover;box-shadow:var(--shadow);isolation:isolate}
@@ -215,6 +217,7 @@ h3{font-size:1.2rem;letter-spacing:-0.015em;line-height:1.2}
 .tips li{font-size:0.95rem;color:var(--ink-2);padding-left:26px;position:relative}
 .tips li::before{content:"";position:absolute;left:0;top:0.2em;width:16px;height:16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='%23ff3727' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
 .tips b{display:block;color:var(--ink);font-weight:680}
+.more-link{margin-top:32px}
 
 /* ---------- Train with it ---------- */
 .more{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
@@ -317,6 +320,84 @@ h3{font-size:1.2rem;letter-spacing:-0.015em;line-height:1.2}
 .contact-form textarea{resize:vertical;min-height:150px}
 .form-hint{font-size:0.85rem;color:var(--muted)}
 
+/* ---------- Blog ---------- */
+.top-nav a[aria-current="page"]{color:var(--ink);font-weight:650}
+.blog-intro{padding:72px 0 48px}
+.blog-intro h1{font-size:clamp(2.6rem,5vw,4rem);font-weight:800;font-stretch:106%;letter-spacing:-0.045em;line-height:0.98;max-width:760px}
+.blog-intro p:not(.kicker){margin-top:22px;font-size:1.15rem;color:var(--ink-2);max-width:600px}
+.blog-list{padding:0 0 120px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 24px}
+.blog-card{display:flex;flex-direction:column;text-decoration:none}
+.blog-card-img{display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#cfc8c2;margin-bottom:18px}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.blog-card:hover .blog-card-img img{transform:scale(1.03)}
+.blog-card h2,.blog-card h3{font-size:1.3rem;letter-spacing:-0.02em;line-height:1.2;margin:8px 0}
+.blog-card:hover h2,.blog-card:hover h3{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.blog-card p{font-size:0.95rem;color:var(--ink-2)}
+.related .head{margin-bottom:40px}
+.related .blog-card-img{background:#e6e3e0}
+
+.post-head{max-width:820px;padding-top:56px;padding-bottom:36px}
+.crumbs{display:flex;gap:8px;font-size:0.85rem;font-weight:600;color:var(--muted);margin-bottom:22px}
+.crumbs a{color:var(--red-ink);text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+.post-hero figcaption a{color:inherit}
+.post-head h1{font-size:clamp(2.2rem,4.6vw,3.5rem);font-weight:800;font-stretch:104%;letter-spacing:-0.04em;line-height:1.02}
+.post-dek{margin-top:20px;font-size:1.2rem;line-height:1.5;color:var(--ink-2)}
+.post-meta{margin-top:20px;font-size:0.88rem;color:var(--muted);font-weight:520}
+.post-wrap{max-width:820px}
+.post-hero{position:relative;margin-bottom:36px}
+.post-hero img{width:100%;max-height:560px;object-fit:cover;border-radius:var(--radius);background:#cfc8c2}
+.post-hero figcaption{margin-top:10px;font-size:0.84rem;color:var(--muted)}
+.tldr{padding:24px 26px;border-radius:20px;background:var(--tint);margin-bottom:44px}
+.tldr ul{margin-top:12px;display:grid;gap:8px}
+.tldr li{position:relative;padding-left:22px;font-size:1rem;line-height:1.5;color:var(--ink-2)}
+.tldr li::before{content:"";position:absolute;left:2px;top:0.55em;width:8px;height:8px;border-radius:2px;background:var(--red)}
+.tldr b{color:var(--ink)}
+
+.prose{font-size:1.08rem;line-height:1.7;color:var(--ink-2)}
+.prose > * + *{margin-top:18px}
+.prose h2{font-size:clamp(1.5rem,2.6vw,1.9rem);letter-spacing:-0.025em;line-height:1.15;margin-top:52px;color:var(--ink)}
+.prose h3{font-size:1.18rem;margin-top:32px}
+.prose h2 + *,.prose h3 + *{margin-top:12px}
+.prose b{color:var(--ink);font-weight:650}
+.prose a{color:var(--red-ink);text-underline-offset:2px}
+.prose ul,.prose ol{padding-left:22px}
+.prose ul{list-style:disc}
+.prose ol{list-style:decimal}
+.prose li + li{margin-top:8px}
+.prose li::marker{color:var(--muted)}
+.prose blockquote{padding:24px 26px;border-radius:20px;background:var(--tint)}
+.prose blockquote p{font-size:1.15rem;line-height:1.5;font-weight:560;letter-spacing:-0.01em;color:var(--ink)}
+.prose blockquote cite{display:block;margin-top:12px;font-style:normal;font-size:0.9rem;color:var(--muted)}
+.equation{padding:22px 24px;border-radius:16px;border:1px solid var(--line);text-align:center;font-size:1.25rem;color:var(--ink)}
+.callout{padding:18px 22px;border-left:4px solid var(--red);border-radius:4px 14px 14px 4px;background:#fff4f2}
+.callout p{color:var(--ink)}
+.table{overflow-x:auto;border:1px solid var(--line);border-radius:16px}
+.table table{width:100%;border-collapse:collapse;font-size:0.94rem;line-height:1.45}
+.table th,.table td{padding:12px 16px;text-align:left;vertical-align:top;border-top:1px solid var(--line)}
+.table thead th{border-top:0;background:var(--tint);font-size:0.72rem;font-weight:680;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.table tbody th{font-weight:650;color:var(--ink)}
+.table td{font-variant-numeric:tabular-nums}
+.prose .sources{padding-left:0;list-style:none;font-size:0.9rem;line-height:1.55;color:var(--muted)}
+.prose .sources li{padding-left:16px;position:relative}
+.prose .sources li::before{content:"";position:absolute;left:0;top:0.65em;width:6px;height:2px;background:var(--muted)}
+
+.post-faq{margin-top:56px}
+.post-faq h2{font-size:clamp(1.5rem,2.6vw,1.9rem);letter-spacing:-0.025em;margin-bottom:16px}
+.post-faq details{border-top:1px solid var(--line)}
+.post-faq details:last-child{border-bottom:1px solid var(--line)}
+.post-faq summary{display:flex;justify-content:space-between;gap:16px;padding:18px 0;font-weight:650;font-size:1.04rem;cursor:pointer;list-style:none}
+.post-faq summary::-webkit-details-marker{display:none}
+.post-faq summary::after{content:"+";flex-shrink:0;font-size:1.4rem;line-height:1;font-weight:500;color:var(--muted);transition:transform .2s ease}
+.post-faq details[open] summary::after{transform:rotate(45deg)}
+.post-faq details p{padding:0 0 20px;color:var(--ink-2);line-height:1.65}
+
+.post-cta{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 40px;align-items:center;margin:64px 0 96px;padding:40px;border-radius:28px;background:var(--red);color:#fff}
+.post-cta h2{color:#fff;font-size:clamp(1.8rem,3vw,2.4rem);letter-spacing:-0.035em}
+.post-cta p{margin-top:12px;color:rgba(255,255,255,0.88);max-width:460px}
+.post-cta .cta-note{color:rgba(255,255,255,0.85)}
+
 /* ---------- Responsive ---------- */
 @media (max-width:1100px){
   .hero-grid{grid-template-columns:minmax(0,1fr) 470px;gap:32px}
@@ -360,7 +441,9 @@ h3{font-size:1.2rem;letter-spacing:-0.015em;line-height:1.2}
   .foot-top{grid-template-columns:repeat(3,minmax(0,1fr))}
   .foot-brand{grid-column:1/-1}
   .sticky{display:flex}
-  .home .foot{padding-bottom:100px}
+  .home .foot,.blog .foot{padding-bottom:100px}
+  .blog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .post-cta{grid-template-columns:1fr;padding:32px}
 }
 @media (max-width:560px){
   body{font-size:16px}
@@ -385,6 +468,15 @@ h3{font-size:1.2rem;letter-spacing:-0.015em;line-height:1.2}
   .final-card{padding:40px 22px 0;border-radius:28px}
   .final-phones{height:280px}
   .foot-top{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .blog-intro{padding:48px 0 36px}
+  .blog-grid{grid-template-columns:1fr}
+  .post-head{padding-top:36px}
+  .post-dek{font-size:1.08rem}
+  .prose{font-size:1.02rem}
+  .tldr{padding:20px}
+  .equation{font-size:1rem;padding:18px 14px}
+  .table th,.table td{padding:10px 12px}
+  .post-cta{padding:28px 22px;border-radius:24px;margin-bottom:72px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
