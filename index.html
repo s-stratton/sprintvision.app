@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>SprintVision — See every step of your sprint</title>
   <meta name="description" content="Film one sprint on your iPhone. SprintVision tracks your whole body, measures every step and shows you exactly what to fix to get faster.">
+  <link rel="canonical" href="https://sprintvision.app/">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <meta name="theme-color" content="#ffffff">
@@ -22,6 +23,42 @@
   <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wdth,wght@0,75..125,200..900;1,75..125,200..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://sprintvision.app/#org",
+        "name": "SprintVision",
+        "url": "https://sprintvision.app/",
+        "logo": "https://sprintvision.app/assets/sprint_vision_logo.png",
+        "sameAs": [
+          "https://www.instagram.com/sprintvisionapp",
+          "https://x.com/sprintvisionapp",
+          "https://apps.apple.com/ie/app/sprintvision-sprint-analysis/id6782655591"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://sprintvision.app/#site",
+        "name": "SprintVision",
+        "url": "https://sprintvision.app/",
+        "publisher": {"@id": "https://sprintvision.app/#org"}
+      },
+      {
+        "@type": "MobileApplication",
+        "name": "SprintVision: Sprint Analysis",
+        "operatingSystem": "iOS",
+        "applicationCategory": "SportsApplication",
+        "description": "Film one sprint on your iPhone. SprintVision tracks your whole body, measures every step (length, ground contact, flight time and speed) and rates your set position, drive phase, top-speed mechanics and arm action against targets from sprint research, with a cue for anything outside the range.",
+        "downloadUrl": "https://apps.apple.com/ie/app/sprintvision-sprint-analysis/id6782655591",
+        "image": "https://sprintvision.app/assets/og-image.jpg",
+        "publisher": {"@id": "https://sprintvision.app/#org"}
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="home">
   <header class="top">
@@ -32,6 +69,7 @@
         <a href="#steps">Every step</a>
         <a href="#fix">What to fix</a>
         <a href="#filming">Filming</a>
+        <a href="blog/">Blog</a>
       </nav>
       <a class="btn btn-ink" href="https://apps.apple.com/ie/app/sprintvision-sprint-analysis/id6782655591" target="_blank" rel="noopener">Get the app</a>
     </div>
@@ -51,7 +89,7 @@
           </div>
           <div class="proof">
             <span class="faces" aria-hidden="true"><img src="assets/israel_pfp.jpg" alt=""><img src="assets/bori.jpeg" alt=""><img src="assets/Default_pfp.jpg" alt=""></span>
-            <span>Trusted by national record holders and Olympic sprinters</span>
+            <a href="#athletes">See what athletes say</a>
           </div>
         </div>
 
@@ -173,7 +211,7 @@
           <div class="head reveal">
             <p class="kicker">What to fix</p>
             <h2>Know exactly what to work on next.</h2>
-            <p>Your set position, drive phase and arm action are rated against targets from sprint research, with a cue for anything outside the range.</p>
+            <p>Your set position, drive phase and arm action are rated against targets from sprint research, with a cue for anything outside the range. <a class="link" href="blog/how-to-set-up-starting-blocks/">See the research</a></p>
           </div>
           <div class="ratings">
             <article class="rating reveal" style="--lo:85;--hi:105;--v:108;--min:70;--max:130">
@@ -261,6 +299,7 @@
           <li><b>Real-time video.</b> Film at normal speed so every step is timed accurately.</li>
           <li><b>Want a split?</b> Keep the start and finish in shot, then mark them on the video.</li>
         </ul>
+        <p class="more-link reveal"><a class="link" href="blog/sprint-video-analysis/">Read the full filming guide <span aria-hidden="true">→</span></a></p>
       </div>
     </section>
 
@@ -355,6 +394,7 @@
           <a href="index.html#steps">Every step</a>
           <a href="index.html#fix">What to fix</a>
           <a href="index.html#filming">Filming tips</a>
+          <a href="blog/">Blog</a>
         </nav>
         <nav class="foot-col" aria-label="Company">
           <h4>Company</h4>

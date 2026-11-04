@@ -1,0 +1,39 @@
+# SprintVision
+
+> SprintVision is an iPhone app for sprinters and coaches. You film one sprint (a block start,
+> acceleration or flying run) at normal speed, and it tracks the whole body, measures every step
+> (length, ground contact, flight time, speed, step frequency) and rates your positions against
+> targets from published sprint biomechanics research, with a coaching cue for anything outside
+> the range. Free trial, then a subscription.
+
+- It works side-on, handheld while following the run, or from behind; the camera can move.
+- Rated: set position (front and rear hip and knee, trunk), torso lean, shin angle at touchdown,
+  knee angle at touchdown, knee lift, heel recovery, arm swing, elbow angle and step frequency,
+  with separate targets for the drive phase and upright running where they apply.
+- Ground contact and flight times are shown as estimates (phone video is usually 30 fps).
+- Also: a training calendar, session tracking with rest timers, PDF reports and video export.
+- Plans: Athlete (1 athlete), Coach (up to 5), Club (up to 25), custom plans for more.
+- What athletes say: "Everything is very clear, which is important during sessions so you're not
+  wasting time or getting stressed about figuring out what the analysis says." (Israel Olatunde,
+  100 m national record holder, European 100 m finalist)
+
+App Store: https://apps.apple.com/ie/app/sprintvision-sprint-analysis/id6782655591
+
+## Pages
+
+- [Home](https://sprintvision.app/): what the app does, with a real analysed block start
+- [Blog](https://sprintvision.app/blog/): research-backed sprint technique guides
+- [Contact](https://sprintvision.app/contact.html)
+
+## Blog posts
+
+- [Sprint Mechanics Assessment Score (S-MAS): the 12 checks, explained](https://sprintvision.app/blog/sprint-mechanics-assessment-score/): What the Sprint Mechanics Assessment Score (S-MAS) is, its 12 checks explained, what the research links it to, and how to score a sprint from your own video.
+- [Proper sprinting form: a beginner’s guide to sprint technique](https://sprintvision.app/blog/proper-sprinting-form/): What good sprinting form looks like, from posture and arm action to where your foot lands, how it changes from acceleration to top speed, and the common mistakes to fix first.
+- [Sprint start without blocks: 3-point, 4-point and standing starts](https://sprintvision.app/blog/sprint-start-without-blocks/): How to do a sprint start without blocks: setting up a 3-point, 4-point or standing start, which to use when, and the first-step mistakes that cost the most time.
+- [The best app for sprinters in 2026: what a sprint analysis app should do](https://sprintvision.app/blog/best-app-for-sprinters/): What the best sprint analysis app should do: measure every step from a phone video, rate your technique against research, and tell you what to fix. How SprintVision does it, what it costs and who it's for.
+- [How to set up starting blocks: spacing, angles and the set position](https://sprintvision.app/blog/how-to-set-up-starting-blocks/): How to set up starting blocks step by step: where to put each pedal, which foot goes in front, and what a strong set position looks like, with the angles world-class sprinters hold.
+- [Sprint acceleration technique: drive phase, body lean and drills](https://sprintvision.app/blog/sprint-acceleration-technique/): How elite sprinters accelerate: body angle, shin angles and step rate in the drive phase, and the drills that build it.
+- [Max velocity sprinting: mechanics, technique and drills](https://sprintvision.app/blog/max-velocity-sprinting/): What good top-speed sprinting mechanics look like, the numbers behind them, and the max velocity drills that build them.
+- [How to increase stride length and stride frequency for sprinting](https://sprintvision.app/blog/how-to-increase-stride-length-and-frequency/): How to increase stride length without overstriding and improve stride frequency for sprinting: what limits each, and the technique and drills that help.
+- [Ground contact time in sprinting: what’s good and how to reduce it](https://sprintvision.app/blog/ground-contact-time-sprinting/): What a good ground contact time is for sprinters and runners, why shorter contacts go with faster running, how to reduce yours, and how accurately video can measure it.
+- [Sprint video analysis: how to film and analyse your sprint technique](https://sprintvision.app/blog/sprint-video-analysis/): How to film a sprint on your phone for video analysis, and what to look for in the set position, acceleration and top speed when you analyse your sprint technique.
