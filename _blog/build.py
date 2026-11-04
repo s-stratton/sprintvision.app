@@ -133,6 +133,7 @@ def footer(up):
   </div>
 
   <script src="{up}js/site.js" defer></script>
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "57adea9f038b44659b6eff30df797184"}}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
 """
